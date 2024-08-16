@@ -51,7 +51,7 @@ namespace utilidadesv2.Servicios
             fechaDeNacimiento = ObtenerFechaDeNacimiento();
             sexo = ObtenerSexo();
             paterno = await _repoMongo.ObtenerApellidoAleatorioAsync();
-            materno = random.Next(0, 1) == 0 ? string.Empty : await _repoMongo.ObtenerApellidoAleatorioAsync();
+            materno = await _repoMongo.ObtenerApellidoAleatorioAsync();
             nombres = await _repoMongo.ObtenerNombresAsync(sexo == Sexo.Mujer ? 0 : 1);
             estado = ObtenerEstado();
             curp = _curp.Generar(nombres, paterno, materno, sexo, fechaDeNacimiento, estado);
