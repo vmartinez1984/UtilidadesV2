@@ -12,13 +12,26 @@ namespace utilidadesv2.Servicios
     public class ServicioDePersona
     {
         private readonly RepositorioDeNombresYApellidos _apellidoNombreRepository;
+        private readonly RepositorioDeNombresYApellidosEs _repoMongo;
+        private readonly RepositorioDeCodigoPostal _repositorioDeCodigoPostal;
         private readonly Curp _curp;
-        public ServicioDePersona(Curp curp, RepositorioDeNombresYApellidos repositorio)
+
+        public ServicioDePersona(
+            Curp curp, RepositorioDeNombresYApellidos repositorio,
+            RepositorioDeNombresYApellidosEs repoMongo,
+            RepositorioDeCodigoPostal repositorioDeCodigoPostal
+        )
         {
             _curp = curp;
             _apellidoNombreRepository = repositorio;
+            _repoMongo = repoMongo;
+            _repositorioDeCodigoPostal = repositorioDeCodigoPostal;
         }
 
+        /// <summary>
+        /// Crea la persona fake
+        /// </summary>
+        /// <returns></returns>
         public async Task<PersonaFakeDto> ObtenerAsync()
         {
             PersonaFakeDto clienteFake;
@@ -30,15 +43,16 @@ namespace utilidadesv2.Servicios
             string nombres;
             string curp;
             Sexo sexo;
+            Random random = new Random();
             /*
              Hombre = 'H', Mujer = 'M'
              */
 
             fechaDeNacimiento = ObtenerFechaDeNacimiento();
             sexo = ObtenerSexo();
-            paterno = await _apellidoNombreRepository.ObtenerApellidoAleatorioAsync();
-            materno = await _apellidoNombreRepository.ObtenerApellidoAleatorioAsync();
-            nombres = _apellidoNombreRepository.ObtenerNombre(sexo == Sexo.Mujer ? 0 : 1).Result;
+            paterno = await _repoMongo.ObtenerApellidoAleatorioAsync();
+            materno = random.Next(0, 1) == 0 ? string.Empty : await _repoMongo.ObtenerApellidoAleatorioAsync();
+            nombres = await _repoMongo.ObtenerNombresAsync(sexo == Sexo.Mujer ? 0 : 1);
             estado = ObtenerEstado();
             curp = _curp.Generar(nombres, paterno, materno, sexo, fechaDeNacimiento, estado);
             codigoPostal = await ObtenerCodigoPostalAleatorioPorEstado((int)estado);
@@ -60,8 +74,8 @@ namespace utilidadesv2.Servicios
                 LugarDeNacimiento = estado.ToString().Replace("_", " "),
                 MobilePhone = ObtenerTelefono(),
                 Municipio = codigoPostal.Alcaldia,
-                NumeroExterior = "S/N",
-                NumeroInterior = "S/N",
+                NumeroExterior = "Exterior",
+                NumeroInterior = "Interior",
                 PrimerApellido = paterno,
                 SegundoApellido = materno,
                 Rfc = curp.Substring(0, 13),
@@ -77,14 +91,15 @@ namespace utilidadesv2.Servicios
         {
             CodigoPostalEntity codigoPostal;
 
-            var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Get, $@"https://codigospostales.vmartinez84.xyz/api/CodigosPostales/Estados/{estado}/Aleatorio");
-            request.Headers.Add("accept", "*/*");
-            var response = await client.SendAsync(request);
-            if (response.IsSuccessStatusCode)
-                codigoPostal = Newtonsoft.Json.JsonConvert.DeserializeObject<CodigoPostalEntity>(await response.Content.ReadAsStringAsync());
-            else
-                codigoPostal = null;
+            //var client = new HttpClient();
+            //var request = new HttpRequestMessage(HttpMethod.Get, $@"https://codigospostales.vmartinez84.xyz/api/CodigosPostales/Estados/{estado}/Aleatorio");
+            //request.Headers.Add("accept", "*/*");
+            //var response = await client.SendAsync(request);
+            //if (response.IsSuccessStatusCode)
+            //    codigoPostal = Newtonsoft.Json.JsonConvert.DeserializeObject<CodigoPostalEntity>(await response.Content.ReadAsStringAsync());
+            //else
+            //    codigoPostal = null;
+           codigoPostal = await _repositorioDeCodigoPostal.ObtenerCodigoPostalAleatorioAsync(estado.ToString());
 
             return codigoPostal;
         }
@@ -159,6 +174,48 @@ namespace utilidadesv2.Servicios
                 r += random.Next(0, 9).ToString();
             }
             return r;
+        }
+
+        internal async Task AgregarNombreYApellidosAsync()
+        {
+            List<string> datos;
+            List<ApellidoNombre> lista = new List<ApellidoNombre>();
+
+            await _repoMongo.BorrarColeccionAsync();
+            datos = Apellido.ObtenerTodos();
+            datos.ForEach(dato =>
+            {
+                lista.Add(new ApellidoNombre
+                {
+                    Dato = dato,
+                    Tipo = "Apellido"
+                });
+            });
+            await _repoMongo.AgregarAsync(lista);
+
+            lista = new List<ApellidoNombre>();
+            datos = Nombre.ObtenerTodas();
+            datos.ForEach(dato =>
+            {
+                lista.Add(new ApellidoNombre
+                {
+                    Dato = dato,
+                    Tipo = "Nombre Mujer"
+                });
+            });
+            await _repoMongo.AgregarAsync(lista);
+
+            lista = new List<ApellidoNombre>();
+            datos = Nombre.ObtenerTodos();
+            datos.ForEach(dato =>
+            {
+                lista.Add(new ApellidoNombre
+                {
+                    Dato = dato,
+                    Tipo = "Nombre Hombre"
+                });
+            });
+            await _repoMongo.AgregarAsync(lista);
         }
     }
 }

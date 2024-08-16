@@ -12,10 +12,15 @@ builder.Services.AddScoped<Curp>();
 builder.Services.AddScoped<AppDbContext>();
 builder.Services.AddScoped<RepositorioDeNombresYApellidos>();
 builder.Services.AddScoped<RepositorioDeNombresYApellidosMx>();
+builder.Services.AddScoped<RepositorioDeNombresYApellidosEs>();
 builder.Services.AddScoped<ServicioDePersona>();
+builder.Services.AddScoped<RepositorioDeCodigoPostal>();
 builder.Services.AddControllers();
 builder.Services.Configure<DataSettingsMongoDb>(
     builder.Configuration.GetSection("DataSettingMongoDb")
+);
+builder.Services.Configure<DataSettingMongoDbCodigosPostales>(
+    builder.Configuration.GetSection("DataSettingMongoDbCodigosPostales")
 );
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -1,9 +1,15 @@
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
 using System.ComponentModel.DataAnnotations;
 
 namespace utilidadesv2.Entidades
 {
     public class CodigoPostalEntity
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string _id { get; set; }
+
         [Key]
         public int Id { get; set; }
 

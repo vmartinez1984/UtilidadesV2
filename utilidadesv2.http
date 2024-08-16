@@ -1,6 +1,12 @@
 @utilidadesv2_HostAddress = http://localhost:5213
 
-GET {{utilidadesv2_HostAddress}}/weatherforecast/
+POST {{utilidadesv2_HostAddress}}/api/PersonaFakes
 Accept: application/json
-
 ###
+
+GET {{utilidadesv2_HostAddress}}/api/PersonaFakes
+Accept: application/json
+###
+
+GET {{utilidadesv2_HostAddress}}/api/PersonaFakes?numeroDePersonas=10
+Accept: application/json

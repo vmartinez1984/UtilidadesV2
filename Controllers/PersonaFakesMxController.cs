@@ -51,6 +51,12 @@ namespace utilidadesv2.Controllers
             }
         }
 
+        /// <summary>
+        /// Compara dos cadenas ignorando mayusculas, minusculsa y acentos
+        /// </summary>
+        /// <param name="cadena1"></param>
+        /// <param name="cadena2"></param>
+        /// <returns></returns>
         private bool CompararCadenas(string cadena1, string cadena2)
         {
             var comparador = StringComparer.Create(CultureInfo.InvariantCulture, CompareOptions.IgnoreNonSpace | CompareOptions.IgnoreCase);
@@ -73,7 +79,7 @@ namespace utilidadesv2.Controllers
                 });
             });
             existentes = await _repositorio.ObtenerApellidosAsync();
-             foreach (var nombre in lista)
+            foreach (var nombre in lista)
             {
                 var item = existentes.FirstOrDefault(item => CompararCadenas(item.Dato, nombre.Dato));
                 if (item == null)

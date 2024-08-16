@@ -9,7 +9,7 @@ La base de datos se obtuvo de un registro español, por lo que hay nombre arabes
 
 # Personas fakes Mx
 
-Es un poryecto donde se registraran nombres y apellidos mexicanos para generar las personas fakes MX
+Es un proyecto donde se registraran nombres y apellidos mexicanos para generar las personas fakes MX
 
 
 # Lugares

@@ -50,9 +50,9 @@ namespace utilidadesv2.Controllers
         //[HttpPost]
         //public async Task<ActionResult> AgregarNombreYApellidos()
         //{
-        //    await _unitOfWork.Persona.AgregarNombreYApellidosAsync();
+        //   await _servicioDePersona.AgregarNombreYApellidosAsync();
 
-        //    return Ok();
+        //   return Ok();
         //}
     }
 }
