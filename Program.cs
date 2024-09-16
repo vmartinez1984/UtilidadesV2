@@ -22,6 +22,7 @@ builder.Services.Configure<DataSettingsMongoDb>(
 builder.Services.Configure<DataSettingMongoDbCodigosPostales>(
     builder.Configuration.GetSection("DataSettingMongoDbCodigosPostales")
 );
+builder.Services.AddScoped<ServicioDeClabes>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
