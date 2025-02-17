@@ -31,7 +31,7 @@ builder.Services.AddSwaggerGen(options =>
     {
         Version = "v1.3",
         Title = "Utilidades",
-        Description = @"servicio de códigos postales de México de SEPOMEX",
+        Description = @"Servicios de utilidades para tests",
         Contact = new OpenApiContact
         {
             Name = "Víctor Martínez",

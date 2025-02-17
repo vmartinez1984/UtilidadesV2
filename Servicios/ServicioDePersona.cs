@@ -6,6 +6,7 @@ using utilidadesv2.Dtos;
 using utilidadesv2.Entidades;
 using utilidadesv2.Repositorio;
 using System.Security.Cryptography;
+using utilidadesv2.ServicioRfc;
 
 namespace utilidadesv2.Servicios
 {
@@ -17,7 +18,8 @@ namespace utilidadesv2.Servicios
         private readonly Curp _curp;
 
         public ServicioDePersona(
-            Curp curp, RepositorioDeNombresYApellidos repositorio,
+            Curp curp,
+            RepositorioDeNombresYApellidos repositorio,
             RepositorioDeNombresYApellidosEs repoMongo,
             RepositorioDeCodigoPostal repositorioDeCodigoPostal
         )
@@ -63,7 +65,7 @@ namespace utilidadesv2.Servicios
                 CodigoPostal = codigoPostal.CodigoPostal,
                 Colonia = $"{codigoPostal.TipoDeAsentamiento} {codigoPostal.Asentamiento}",
                 Curp = curp,
-                EmailAddress = $"{nombres.Replace(" ", string.Empty).Replace("ñ", "n")}.{paterno.Replace(" ", string.Empty).Replace("ñ", "n")}@gmail.com".ToLower(),
+                EmailAddress = $"{nombres.ToLower().Replace(" ", string.Empty).Replace("ñ", "n")}.{paterno.ToLower().Replace(" ", string.Empty).Replace("ñ", "n")}@gmail.com",
                 Estado = codigoPostal.Estado,
                 EstadoCivilDatosCliente = "Soltero",
                 FirstName = nombres,
@@ -78,7 +80,7 @@ namespace utilidadesv2.Servicios
                 NumeroInterior = "Interior",
                 PrimerApellido = paterno,
                 SegundoApellido = materno,
-                Rfc = curp.Substring(0, 13),
+                Rfc = GeneradorDeRfc.CalculateRFCHomonym(TipoPersona.Fisica, nombres, paterno, materno, fechaDeNacimiento),
                 Guid = Guid.NewGuid(),
                 idMongoDb = ObjectId.GenerateNewId().ToString(),
                 idFirebase = GenerateFirebaseId()
@@ -99,7 +101,7 @@ namespace utilidadesv2.Servicios
             //    codigoPostal = Newtonsoft.Json.JsonConvert.DeserializeObject<CodigoPostalEntity>(await response.Content.ReadAsStringAsync());
             //else
             //    codigoPostal = null;
-           codigoPostal = await _repositorioDeCodigoPostal.ObtenerCodigoPostalAleatorioAsync(estado.ToString());
+            codigoPostal = await _repositorioDeCodigoPostal.ObtenerCodigoPostalAleatorioAsync(estado.ToString());
 
             return codigoPostal;
         }
