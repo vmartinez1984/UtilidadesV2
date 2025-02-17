@@ -32,7 +32,7 @@ namespace utilidadesv2.Controllers
                 rfcDto.FechaDeNacimiento
             );
 
-            return Created(string.Empty, new { Rfc = rfcConHomoclave });
+            return Created(string.Empty, new { Rfc = rfcConHomoclave, Fecha= DateTime.Now });
         }
     }
 }

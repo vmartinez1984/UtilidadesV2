@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\vmartinez\source\repos\vmartinez1984\utilidadesv2\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2024-11-08T20:00:39.5135221Z||;True|2024-09-16T13:16:35.9156301-06:00||;True|2024-08-16T12:03:15.0925324-06:00||;True|2024-08-07T13:49:39.3354445-06:00||;True|2024-08-07T13:49:10.5058191-06:00||;True|2024-08-07T13:47:24.2814852-06:00||;True|2024-08-07T13:05:51.6822760-06:00||;</History>
+    <History>True|2025-02-17T17:39:51.0477971Z||;True|2025-02-17T09:47:54.0604462-06:00||;True|2024-11-08T14:00:39.5135221-06:00||;True|2024-09-16T13:16:35.9156301-06:00||;True|2024-08-16T12:03:15.0925324-06:00||;True|2024-08-07T13:49:39.3354445-06:00||;True|2024-08-07T13:49:10.5058191-06:00||;True|2024-08-07T13:47:24.2814852-06:00||;True|2024-08-07T13:05:51.6822760-06:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
