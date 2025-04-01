@@ -20,3 +20,14 @@ direcciones
 # Datos técnicos
 
 Se esta usando Mysql para als personas fakes, pero se pretende migrar a MongoDb por las ventajas que ofrece.
+
+# Todo
+
+* Separar en capas Bl, repositorios
+* Codigos postales
+* Personas fake con datos de México
+* Direcciones, extraerlas de los museos, universidades, de los datos de México
+* Diagramas
+* Agregar 
+* Presentacion grpc
+* Presentacion soap

@@ -1,6 +1,8 @@
 using Microsoft.Extensions.Options;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
-using System;
+using Newtonsoft.Json;
 using utilidadesv2.Entidades;
 
 namespace utilidadesv2.Repositorio
@@ -34,12 +36,19 @@ namespace utilidadesv2.Repositorio
 
         internal async Task<string> ObtenerApellidoAleatorioAsync()
         {
-            List<ApellidoNombre> lista;
-            Random random = new Random();
+            // Definir el filtro
+            var filtro = new BsonDocument("Tipo", "Apellido"); // Reemplaza con tu condición
+            // Agregación para obtener un documento aleatorio
+            var pipeline = new[]
+            {
+                new BsonDocument("$match", filtro),  // Filtrar documentos
+                new BsonDocument("$sample", new BsonDocument("size", 1)) // Obtiene 1 documento aleatorio
+            };
 
-            lista = await ObtenerApellidosAsync();
+            var result = await _collection.Aggregate<BsonDocument>(pipeline).FirstOrDefaultAsync();
+            var objeto = BsonSerializer.Deserialize<ApellidoNombre>(result);
 
-            return lista[random.Next(0,lista.Count)].Dato;
+            return objeto.Dato;
         }
 
         internal async Task<List<ApellidoNombre>> ObtenerApellidosAsync()
@@ -57,17 +66,25 @@ namespace utilidadesv2.Repositorio
         /// <param name="genero"></param>
         /// <returns></returns>
         internal async Task<string> ObtenerNombresAsync(int genero)
-        {
-            List<ApellidoNombre> lista;
+        {            
             Random random = new Random();
+            BsonDocument filtro;
 
             if (genero == 1)
-                lista = (await _collection.FindAsync(x => x.Tipo == "Nombre Hombre")).ToList();
+                filtro = new BsonDocument("Tipo", "Nombre Hombre");
             else
-                lista = (await _collection.FindAsync(x => x.Tipo == "Nombre Mujer")).ToList();
-            lista = await ObtenerApellidosAsync();
+                filtro = new BsonDocument("Tipo", "Nombre Mujer");
 
-            return lista[random.Next(0, lista.Count)].Dato;
+            var pipeline = new[]
+            {
+                new BsonDocument("$match", filtro),  // Filtrar documentos
+                new BsonDocument("$sample", new BsonDocument("size", 1)) // Obtiene 1 documento aleatorio
+            };
+
+            var result = await _collection.Aggregate<BsonDocument>(pipeline).FirstOrDefaultAsync();
+            var objeto = BsonSerializer.Deserialize<ApellidoNombre>(result);
+
+            return objeto.Dato;
         }
     }
 }

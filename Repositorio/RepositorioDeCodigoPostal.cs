@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using utilidadesv2.Entidades;
 
@@ -30,35 +32,29 @@ namespace utilidadesv2.Repositorio
         public async Task<CodigoPostalEntity> ObtenerCodigoPostalAleatorioAsync(string estado)
         {
             var random = new Random();
-            FilterDefinition<CodigoPostalEntity> filter;
+            BsonDocument filtro;
 
+            // Definir el filtro
             if (int.TryParse(estado, out int estadoId))
-            {
-                filter = Builders<CodigoPostalEntity>.Filter.Eq(x => x.EstadoId, estadoId);
+            {                
+                filtro = new BsonDocument("EstadoId", estadoId); // Reemplaza con tu condición
             }
             else
             {
-                filter = Builders<CodigoPostalEntity>.Filter.Eq(x => x.Estado, estado);
+                filtro = new BsonDocument("Estado", estado); // Reemplaza con tu condición             
             }
 
-            // Obtén el número total de documentos que cumplen el filtro
-            var totalDocuments = await _collection.CountDocumentsAsync(filter);
-
-            if (totalDocuments == 0)
+            // Agregación para obtener un documento aleatorio
+            var pipeline = new[]
             {
-                return null; // O maneja el caso en que no se encuentren documentos
-            }
+                new BsonDocument("$match", filtro),  // Filtrar documentos
+                new BsonDocument("$sample", new BsonDocument("size", 1)) // Obtiene 1 documento aleatorio
+            };
 
-            // Selecciona un índice aleatorio
-            var randomIndex = random.Next(0, (int)totalDocuments);
+            var result = await _collection.Aggregate<BsonDocument>(pipeline).FirstOrDefaultAsync();
+            var objeto = BsonSerializer.Deserialize<CodigoPostalEntity>(result);           
 
-            // Usa Find para obtener solo el documento necesario
-            var resultado = await _collection.Find(filter)
-                                             .Skip(randomIndex)
-                                             .Limit(1)
-                                             .FirstOrDefaultAsync();
-
-            return resultado;
+            return objeto;
         }
     }
 }
