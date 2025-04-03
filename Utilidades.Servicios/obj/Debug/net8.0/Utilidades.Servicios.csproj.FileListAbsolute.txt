@@ -1,0 +1,16 @@
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\bin\Debug\net8.0\Utilidades.Servicios.deps.json
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\bin\Debug\net8.0\Utilidades.Servicios.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\bin\Debug\net8.0\Utilidades.Servicios.pdb
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\bin\Debug\net8.0\Utilidades.Repositorios.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\bin\Debug\net8.0\Utilidades.Repositorios.pdb
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\obj\Debug\net8.0\Utilidades.Servicios.csproj.AssemblyReference.cache
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\obj\Debug\net8.0\Utilidades.Servicios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\obj\Debug\net8.0\Utilidades.Servicios.AssemblyInfoInputs.cache
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\obj\Debug\net8.0\Utilidades.Servicios.AssemblyInfo.cs
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\obj\Debug\net8.0\Utilidades.Servicios.csproj.CoreCompileInputs.cache
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\obj\Debug\net8.0\Utilidades.Servicios.sourcelink.json
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\obj\Debug\net8.0\Utilidad.F674C661.Up2Date
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\obj\Debug\net8.0\Utilidades.Servicios.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\obj\Debug\net8.0\refint\Utilidades.Servicios.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\obj\Debug\net8.0\Utilidades.Servicios.pdb
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Servicios\obj\Debug\net8.0\ref\Utilidades.Servicios.dll

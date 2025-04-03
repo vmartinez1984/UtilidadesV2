@@ -1,0 +1,282 @@
+[
+  {
+    "ContainingType": "Utilidades.Api.Controllers.ClabesController",
+    "Method": "Get",
+    "RelativePath": "api/Clabes/{ahorroId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ahorroId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
+    "Method": "ObtenerEstadosAsync",
+    "RelativePath": "api/CodigosPostales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CodigosPostales.Repositorios.Estado, CodigosPostales.Repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "Estados"
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
+    "Method": "AgregarCodigosPostalesAsync",
+    "RelativePath": "api/CodigosPostales",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "formFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
+    "Method": "ObtenerCodigosPostalesPorAsentamientamiento",
+    "RelativePath": "api/CodigosPostales/{asentamiento}/Buscar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "asentamiento",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CodigosPostales.ReglasDeNegocio.CodigoPostalDto, CodigosPostales.ReglasDeNegocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
+    "Method": "ObtenerCodigosPostales",
+    "RelativePath": "api/CodigosPostales/{codigoPostal}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoPostal",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CodigosPostales.ReglasDeNegocio.CodigoPostalDto, CodigosPostales.ReglasDeNegocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
+    "Method": "ObtenerAlcaldias",
+    "RelativePath": "api/CodigosPostales/{estado}/Alcaldias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CodigosPostales.Repositorios.Alcaldia, CodigosPostales.Repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
+    "Method": "ObtenerCodigoPostalAleatorio",
+    "RelativePath": "api/CodigosPostales/Aleatorio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "CodigosPostales.ReglasDeNegocio.CodigoPostalDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
+    "Method": "ObtenerCodigosPostalesPorAlcaldia",
+    "RelativePath": "api/CodigosPostales/Estados/{estado}/Alcaldias/{alcaldia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "alcaldia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CodigosPostales.ReglasDeNegocio.CodigoPostalDto, CodigosPostales.ReglasDeNegocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
+    "Method": "ObtenerCodigosPostalesAsync",
+    "RelativePath": "api/CodigosPostales/Estados/{estado}/Alcaldias/{alcaldia}/{asentamiento}/Buscar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "alcaldia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "asentamiento",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CodigosPostales.ReglasDeNegocio.CodigoPostalDto, CodigosPostales.ReglasDeNegocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
+    "Method": "ObtenerCodigoPostalAleatorioPorEstadoAsync",
+    "RelativePath": "api/CodigosPostales/Estados/{estado}/Aleatorio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CodigosPostales.ReglasDeNegocio.CodigoPostalDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.DireccionesController",
+    "Method": "ObtenerDirecciones",
+    "RelativePath": "api/Direcciones/Direcciones",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numeroDeDirecciones",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.IdentificadoresController",
+    "Method": "Get",
+    "RelativePath": "api/Identificadores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PersonasFakesController",
+    "Method": "ObtenerPersonaFake",
+    "RelativePath": "api/PersonasFakes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numeroDePersonas",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.TarjetasDeDebitoController",
+    "Method": "Get",
+    "RelativePath": "api/TarjetasDeDebito",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
