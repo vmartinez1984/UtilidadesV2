@@ -12,14 +12,6 @@ namespace Peliculas.Bl
             
         }
 
-        string authDomain = "archivos-54624.firebaseapp.com";
-        string apikey = "AIzaSyAEnLgwQe4B-zwq-WYx0IMYHIYhcHyCkzw";
-        string email = "vmartinez@gmail.com";
-        string password = "123456";
-        string token;
-        string rutaDelStorage = "archivos-54624.appspot.com";
-        string contenedor = "Peliculas";
-
         public async Task Borrar(string nombre)
         {
             await ObtenerToken();
