@@ -1,0 +1,13 @@
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\bin\Release\net6.0\Nota.Bl.deps.json
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\bin\Release\net6.0\Nota.Bl.dll
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\bin\Release\net6.0\Nota.Bl.pdb
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\obj\Release\net6.0\Nota.Bl.csproj.AssemblyReference.cache
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\obj\Release\net6.0\Nota.Bl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\obj\Release\net6.0\Nota.Bl.AssemblyInfoInputs.cache
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\obj\Release\net6.0\Nota.Bl.AssemblyInfo.cs
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\obj\Release\net6.0\Nota.Bl.csproj.CoreCompileInputs.cache
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\obj\Release\net6.0\Nota.Bl.sourcelink.json
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\obj\Release\net6.0\Nota.Bl.dll
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\obj\Release\net6.0\refint\Nota.Bl.dll
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\obj\Release\net6.0\Nota.Bl.pdb
+C:\Users\vmartinez\source\repos\Notas\Nota.Bl\obj\Release\net6.0\ref\Nota.Bl.dll

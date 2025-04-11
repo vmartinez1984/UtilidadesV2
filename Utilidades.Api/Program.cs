@@ -1,15 +1,18 @@
+using CodigosPostales.ReglasDeNegocio;
 using Microsoft.OpenApi.Models;
 using Peliculas.Bl;
 using System.Reflection;
 using Utilidades.Repositorios.Entidades;
 using Utilidades.Servicios.Helpers;
+using Notas.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AgregarServicios();
-
+builder.Services.AgregarCodigosPostales();
 builder.Services.AgregarPeliculas();
+builder.Services.AgregarNotas();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

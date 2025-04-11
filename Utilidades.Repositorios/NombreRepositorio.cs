@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
@@ -15,13 +16,13 @@ namespace Utilidades.Repositorios
         /// 
         /// </summary>
         /// <param name="dataSettings"></param>
-        public NombreRepositorio(IOptions<DataSettingsMongoDb> dataSettings)
+        public NombreRepositorio(IConfiguration configuration)
         {
-            var mongoClient = new MongoClient(dataSettings.Value.ConnectionString);
-
-            _mongoDatabase = mongoClient.GetDatabase(dataSettings.Value.DatabaseName);
-
-            _collection = _mongoDatabase.GetCollection<ApellidoNombre>(dataSettings.Value.CollectionName);
+            string stringConnection = configuration.GetConnectionString("Utilidades");
+            var mongoClient = new MongoClient(stringConnection);
+            string databaseName = stringConnection.Split("/").Last().Split("?").First();
+            _mongoDatabase = mongoClient.GetDatabase(databaseName);
+            _collection = _mongoDatabase.GetCollection<ApellidoNombre>("NombreApellidosMx");
         }
         internal async Task AgregarAsync(List<ApellidoNombre> lista)
         {

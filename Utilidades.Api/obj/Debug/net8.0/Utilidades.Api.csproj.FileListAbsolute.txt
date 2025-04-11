@@ -80,3 +80,6 @@ C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\D
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Firebase.Storage.dll
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Peliculas.Bl.dll
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Peliculas.Bl.pdb
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Notas.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Notas.pdb
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll

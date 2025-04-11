@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.Options;
-using MongoDB.Bson.Serialization;
+﻿using MongoDB.Bson.Serialization;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using Utilidades.Repositorios.Entidades;
+using Microsoft.Extensions.Configuration;
 
 namespace Utilidades.Repositorios
 {
@@ -16,12 +16,12 @@ namespace Utilidades.Repositorios
         /// 
         /// </summary>
         /// <param name="dataSettings"></param>
-        public DireccionRepositorio(IOptions<DataSettingsMongoDb> dataSettings)
+        public DireccionRepositorio(IConfiguration configuration)
         {
-            var mongoClient = new MongoClient(dataSettings.Value.ConnectionString);
-
-            _mongoDatabase = mongoClient.GetDatabase(dataSettings.Value.DatabaseName);
-
+            string stringConnection = configuration.GetConnectionString("Utilidades");
+            var mongoClient = new MongoClient(stringConnection);
+            string databaseName = stringConnection.Split("/").Last().Split("?").First();
+            _mongoDatabase = mongoClient.GetDatabase(databaseName);            
             _collection = _mongoDatabase.GetCollection<Direccion>("Direcciones");
         }
 

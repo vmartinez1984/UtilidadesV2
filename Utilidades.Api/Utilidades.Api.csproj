@@ -16,11 +16,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\CodigosPostales.ReglasDeNegocio\CodigosPostales.ReglasDeNegocio.csproj" />
+		<ProjectReference Include="..\Notas\Notas.csproj" />
 		<ProjectReference Include="..\Peliculas.Bl\Peliculas.Bl.csproj" />
 		<ProjectReference Include="..\Utilidades.Servicios\Utilidades.Servicios.csproj" />
 	</ItemGroup>

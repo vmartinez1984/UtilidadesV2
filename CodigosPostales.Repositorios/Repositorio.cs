@@ -16,7 +16,7 @@ namespace CodigosPostales.Repositorios
         /// <param name="configuration"></param>
         public Repositorio(IConfiguration configuration)
         {
-            string stringConnection = configuration.GetConnectionString("CodigosPostales");
+            string stringConnection = configuration.GetConnectionString("Utilidades");
             var mongoClient = new MongoClient(stringConnection);
             string databaseName = stringConnection.Split("/").Last().Split("?").First();
             _mongoDatabase = mongoClient.GetDatabase(databaseName);

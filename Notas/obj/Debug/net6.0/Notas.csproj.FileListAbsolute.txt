@@ -1,0 +1,13 @@
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\bin\Debug\net6.0\Notas.deps.json
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\bin\Debug\net6.0\Notas.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\bin\Debug\net6.0\Notas.pdb
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\obj\Debug\net6.0\Notas.csproj.AssemblyReference.cache
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\obj\Debug\net6.0\Notas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\obj\Debug\net6.0\Notas.AssemblyInfoInputs.cache
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\obj\Debug\net6.0\Notas.AssemblyInfo.cs
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\obj\Debug\net6.0\Notas.csproj.CoreCompileInputs.cache
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\obj\Debug\net6.0\Notas.sourcelink.json
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\obj\Debug\net6.0\Notas.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\obj\Debug\net6.0\refint\Notas.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\obj\Debug\net6.0\Notas.pdb
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Notas\obj\Debug\net6.0\ref\Notas.dll
