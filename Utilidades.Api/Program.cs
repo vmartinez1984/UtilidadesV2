@@ -1,4 +1,5 @@
 using Microsoft.OpenApi.Models;
+using Peliculas.Bl;
 using System.Reflection;
 using Utilidades.Repositorios.Entidades;
 using Utilidades.Servicios.Helpers;
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AgregarServicios();
+
+builder.Services.AgregarPeliculas();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -17,25 +17,6 @@
   },
   {
     "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
-    "Method": "ObtenerEstadosAsync",
-    "RelativePath": "api/CodigosPostales",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[CodigosPostales.Repositorios.Estado, CodigosPostales.Repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "Estados"
-  },
-  {
-    "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
     "Method": "AgregarCodigosPostalesAsync",
     "RelativePath": "api/CodigosPostales",
     "HttpMethod": "POST",
@@ -139,6 +120,25 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
+    "Method": "ObtenerEstadosAsync",
+    "RelativePath": "api/CodigosPostales/Estados",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CodigosPostales.Repositorios.Estado, CodigosPostales.Repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "Estados"
   },
   {
     "ContainingType": "Utilidades.Api.Controllers.CodigosPostalesController",
@@ -277,6 +277,79 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PeliculasController",
+    "Method": "AgregarAsync",
+    "RelativePath": "api/v2/Peliculas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Poster",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Titulo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Resumen",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trailer",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PeliculasController",
+    "Method": "ObtnerAsync",
+    "RelativePath": "api/v2/Peliculas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PeliculasController",
+    "Method": "ObtnerAsync",
+    "RelativePath": "api/v2/Peliculas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PeliculasController",
+    "Method": "ObetnerImagenAsync",
+    "RelativePath": "api/v2/Peliculas/{id}/imagenes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

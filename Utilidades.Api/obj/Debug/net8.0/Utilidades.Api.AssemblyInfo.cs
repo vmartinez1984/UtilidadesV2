@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sin Ningun Lugar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("3.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.0.0+2435f1e4de1d7136825fef5001617a413218bcdc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.0.0+e704eacf43e5cb0f857fdb3bc57c5396442e2f96")]
 [assembly: System.Reflection.AssemblyProductAttribute("Utilidades.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Utilidades.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("3.0.0.0")]

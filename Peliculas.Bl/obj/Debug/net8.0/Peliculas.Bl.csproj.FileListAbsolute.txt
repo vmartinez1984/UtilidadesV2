@@ -1,0 +1,13 @@
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\bin\Debug\net8.0\Peliculas.Bl.deps.json
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\bin\Debug\net8.0\Peliculas.Bl.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\bin\Debug\net8.0\Peliculas.Bl.pdb
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\obj\Debug\net8.0\Peliculas.Bl.csproj.AssemblyReference.cache
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\obj\Debug\net8.0\Peliculas.Bl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\obj\Debug\net8.0\Peliculas.Bl.AssemblyInfoInputs.cache
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\obj\Debug\net8.0\Peliculas.Bl.AssemblyInfo.cs
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\obj\Debug\net8.0\Peliculas.Bl.csproj.CoreCompileInputs.cache
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\obj\Debug\net8.0\Peliculas.Bl.sourcelink.json
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\obj\Debug\net8.0\Peliculas.Bl.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\obj\Debug\net8.0\refint\Peliculas.Bl.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\obj\Debug\net8.0\Peliculas.Bl.pdb
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Peliculas.Bl\obj\Debug\net8.0\ref\Peliculas.Bl.dll

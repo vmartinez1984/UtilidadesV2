@@ -76,3 +76,7 @@ C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\D
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\CodigosPostales.Repositorios.dll
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\CodigosPostales.ReglasDeNegocio.pdb
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\CodigosPostales.Repositorios.pdb
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Firebase.Auth.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Firebase.Storage.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Peliculas.Bl.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Peliculas.Bl.pdb

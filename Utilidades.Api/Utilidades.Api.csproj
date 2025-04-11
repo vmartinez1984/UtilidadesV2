@@ -21,6 +21,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\CodigosPostales.ReglasDeNegocio\CodigosPostales.ReglasDeNegocio.csproj" />
+		<ProjectReference Include="..\Peliculas.Bl\Peliculas.Bl.csproj" />
 		<ProjectReference Include="..\Utilidades.Servicios\Utilidades.Servicios.csproj" />
 	</ItemGroup>
 

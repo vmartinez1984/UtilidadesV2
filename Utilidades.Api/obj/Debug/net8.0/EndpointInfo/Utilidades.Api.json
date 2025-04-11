@@ -34,7 +34,7 @@
         }
       }
     },
-    "/api/CodigosPostales": {
+    "/api/CodigosPostales/Estados": {
       "get": {
         "tags": [
           "CodigosPostales"
@@ -54,41 +54,6 @@
                 }
               }
             }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "CodigosPostales"
-        ],
-        "summary": "Subir coleccion de codigos postales",
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "required": [
-                  "formFile"
-                ],
-                "type": "object",
-                "properties": {
-                  "formFile": {
-                    "type": "string",
-                    "description": "",
-                    "format": "binary"
-                  }
-                }
-              },
-              "encoding": {
-                "formFile": {
-                  "style": "form"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
           }
         }
       }
@@ -341,6 +306,43 @@
         }
       }
     },
+    "/api/CodigosPostales": {
+      "post": {
+        "tags": [
+          "CodigosPostales"
+        ],
+        "summary": "Subir coleccion de codigos postales",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "formFile"
+                ],
+                "type": "object",
+                "properties": {
+                  "formFile": {
+                    "type": "string",
+                    "description": "",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "formFile": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Direcciones/Direcciones": {
       "get": {
         "tags": [
@@ -371,6 +373,112 @@
           "Identificadores"
         ],
         "summary": "Guid 32 caracteres, idMongoDb 24 caracteres, idFirebase 20 caracteres",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v2/Peliculas": {
+      "post": {
+        "tags": [
+          "Peliculas"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Poster": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Titulo": {
+                    "type": "string"
+                  },
+                  "Resumen": {
+                    "type": "string"
+                  },
+                  "Trailer": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "Poster": {
+                  "style": "form"
+                },
+                "Titulo": {
+                  "style": "form"
+                },
+                "Resumen": {
+                  "style": "form"
+                },
+                "Trailer": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Peliculas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v2/Peliculas/{id}": {
+      "get": {
+        "tags": [
+          "Peliculas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v2/Peliculas/{id}/imagenes": {
+      "get": {
+        "tags": [
+          "Peliculas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
