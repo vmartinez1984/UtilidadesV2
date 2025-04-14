@@ -98,27 +98,6 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Utilidades.Api.Controllers.NotasController.ObtenerAsync">
-            <summary>
-            Obtener todas las notas
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Utilidades.Api.Controllers.NotasController.AgregarAsync(Notas.Dtos.NotaDto)">
-            <summary>
-            Agregar nota
-            </summary>
-            <param name="nota"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Utilidades.Api.Controllers.NotasController.ActualizarAsync(System.String,Notas.Dtos.NotaUpdateDto)">
-            <summary>
-            Actualizar nota
-            </summary>
-            <param name="id"></param>
-            <param name="nota"></param>
-            <returns></returns>
-        </member>
         <member name="M:Utilidades.Api.Controllers.PersonasFakesController.ObtenerPersonaFake(System.Int32)">
             <summary>
             Genera una persona fake con datos aleatorios

@@ -2,7 +2,6 @@ using CodigosPostales.ReglasDeNegocio;
 using Microsoft.OpenApi.Models;
 using Peliculas.Bl;
 using System.Reflection;
-using Utilidades.Repositorios.Entidades;
 using Utilidades.Servicios.Helpers;
 using Notas.Helpers;
 
@@ -17,38 +16,46 @@ builder.Services.AgregarNotas();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
+builder.Services.AddSwaggerGen(gen =>
 {
-    options.SwaggerDoc("v1", new OpenApiInfo
+    //gen.SwaggerDoc("v2", new OpenApiInfo
+    //{
+    //    Title = "Server API (internal)",
+    //    Version = "2.0",
+    //    Description = "Internal"
+    //});
+    gen.SwaggerDoc("v1", new OpenApiInfo
     {
-        Version = "v1",
-        Title = "Utilidades",
-        Description = @"Servicios de utilidades para tests",
-        Contact = new OpenApiContact
-        {
-            Name = "Víctor Martínez",
-            Url = new Uri("mailto:ahal_tocob@hotmail.com")
-        }
+        Title = "Server API",
+        Version = "1.0",
+        Description = "This API features all public available endpoints showing different API features."
     });
-    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFilename);
-    if (File.Exists(xmlPath))
-    {
-        options.IncludeXmlComments(xmlPath);
-    }
-});
 
-builder.Services.Configure<DataSettingsMongoDb>(builder.Configuration.GetSection("NombresYApellidos"));
-builder.Services.Configure<DataSettingsCodigosPostalesMongoDb>(builder.Configuration.GetSection("CodigosPostales"));
+    //gen.DocInclusionPredicate((docName, apiDesc) =>
+    //{
+    //    if (docName.Contains("Peliculas"))
+    //    {
+    //        return apiDesc.RelativePath.Contains("Peliculas/");
+    //    }
+    //    else
+    //    {
+    //        return !apiDesc.RelativePath.Contains("Peliculas/");
+    //    }
+    //});
+
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    gen.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+});
 
 builder.Services.AddCors(options => options.AddPolicy("AllowWebApp", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 var app = builder.Build();
 
 app.UseSwagger();
-app.UseSwaggerUI(x =>
+app.UseSwaggerUI(c =>
 {
-    x.SwaggerEndpoint("./swagger/v1/swagger.json", "Utilidades");
-    x.RoutePrefix = string.Empty;
+    c.SwaggerEndpoint("v1/swagger.json", "Viewer Server API v1");
+    //c.SwaggerEndpoint("v2/swagger.json", "Server API v1 (administracion)");
+    c.RoutePrefix = string.Empty;
 });
 
 app.UseCors("AllowWebApp");

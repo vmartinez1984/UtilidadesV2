@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Peliculas.Bl;
 
 namespace Utilidades.Api.Controllers
 {
     [Route("api/v2/[controller]")]
     [ApiController]
+    //[EndpointGroupName("YoMerengues")]
     public class PeliculasController : ControllerBase
     {
         private readonly PeliculaBl _pelicula;
@@ -54,6 +54,14 @@ namespace Utilidades.Api.Controllers
             peliculas = await _pelicula.ObtenerAsync();
 
             return Ok(peliculas);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> ActualizarAsync(int id, [FromForm] PeliculaDtoIn pelicula)
+        {
+            await _pelicula.ActualizarAsync(id, pelicula);
+
+            return Accepted();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Peliculas.Bl
         string rutaDelStorage = "archivos-54624.appspot.com";
         string contenedor = "Peliculas";
 
-        public async Task Borrar(string nombre)
+        public async Task BorrarAsync(string nombre)
         {
             await ObtenerToken();
             await new FirebaseStorage(
@@ -36,11 +36,11 @@ namespace Peliculas.Bl
                 .DeleteAsync();
         }
 
-        public async Task<string> EditarArchivo(string nombre, IFormFile formFile)
+        public async Task<string> ActualizarArchivoAsync(string nombre, IFormFile formFile)
         {
             string url;
 
-            await Borrar(nombre);
+            await BorrarAsync(nombre);
             url = await Guardar(nombre, formFile);
 
             return url;
