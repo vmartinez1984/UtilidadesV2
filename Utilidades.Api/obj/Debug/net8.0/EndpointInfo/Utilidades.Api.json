@@ -339,7 +339,7 @@
         }
       }
     },
-    "/api/Direcciones/Direcciones": {
+    "/api/Direcciones": {
       "get": {
         "tags": [
           "Direcciones"

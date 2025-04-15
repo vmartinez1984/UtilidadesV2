@@ -230,7 +230,7 @@
   {
     "ContainingType": "Utilidades.Api.Controllers.DireccionesController",
     "Method": "ObtenerDirecciones",
-    "RelativePath": "api/Direcciones/Direcciones",
+    "RelativePath": "api/Direcciones",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

@@ -53,7 +53,7 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("v1/swagger.json", "Viewer Server API v1");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
     //c.SwaggerEndpoint("v2/swagger.json", "Server API v1 (administracion)");
     c.RoutePrefix = string.Empty;
 });

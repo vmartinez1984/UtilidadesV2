@@ -3,7 +3,7 @@
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2025-04-14T23:38:59.1274158Z||;True|2025-04-11T11:27:08.7918515-06:00||;</History>
+    <History>True|2025-04-15T00:11:43.1524455Z||;True|2025-04-14T18:11:21.4039355-06:00||;True|2025-04-14T18:10:07.4571014-06:00||;True|2025-04-14T18:08:20.2202193-06:00||;True|2025-04-14T17:38:59.1274158-06:00||;True|2025-04-11T11:27:08.7918515-06:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

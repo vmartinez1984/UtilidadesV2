@@ -75,7 +75,6 @@ C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\D
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Utilidades.Api.props
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Utilidades.Api.props
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\Utilidad.34DBFBA8.Up2Date
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\Utilidades.Api.dll
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\refint\Utilidades.Api.dll
@@ -83,3 +82,4 @@ C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\D
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\Utilidades.Api.pdb
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\Utilidades.Api.genruntimeconfig.cache
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\ref\Utilidades.Api.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

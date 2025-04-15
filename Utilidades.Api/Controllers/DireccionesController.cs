@@ -24,7 +24,7 @@ namespace Utilidades.Api.Controllers
         /// Otiene una dirección valida con coordenadas, es una colección de direcciones de bibliotecas en México
         /// </summary>
         /// <returns></returns>        
-        [HttpGet("Direcciones")]
+        [HttpGet]
         public async Task<ActionResult> ObtenerDirecciones(int numeroDeDirecciones = 1)
         {
             if (numeroDeDirecciones == 1)
