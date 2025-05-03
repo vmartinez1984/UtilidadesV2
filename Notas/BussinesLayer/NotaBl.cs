@@ -19,11 +19,12 @@ namespace Notas.BussinesLayer
 
             notas = (await _notaRepositorio.ObtenerTodosAsync()).Select(x => new NotaDto
             {
-                Contenido = x.Contenido,
-                Estado = x.Estado,
-                Id = Guid.Parse(x.Id),
-                Nombre = x.Nombre,
-                Tags = x.Tags
+                Tags = x.Tags,
+                Valor01 = x.Valor01,
+                Valor02 = x.Valor02,
+                Valor03 = x.Valor03,
+                Valor04 = x.Valor04,
+                EncodedKey = x.EncodedKey
             }).ToList();
 
             return notas;
@@ -31,29 +32,26 @@ namespace Notas.BussinesLayer
 
         public async Task<string> AgregarAsync(NotaDto notaDto) => await _notaRepositorio.AgregarAsync(new NotaEntity
         {
-            Contenido = notaDto.Contenido,
-            Estado = notaDto.Estado,
-            FechaDeRegistro = DateTime.Now,
-            Id = notaDto.Id.ToString(),
-            Nombre = notaDto.Nombre,
             Tags = notaDto.Tags,
-            FechaFin = notaDto.FechaFin,
-            FechaInicio = notaDto.FechaInicio,
+            EncodedKey = notaDto.EncodedKey,
+            Valor01 = notaDto.Valor01,
+            Valor02 = notaDto.Valor02,
+            Valor03 = notaDto.Valor03,
+            Valor04 = notaDto.Valor04
         });
 
-        public async Task Actaulizar(string id, NotaUpdateDto nota)
+        public async Task Actaulizar(string id, NotaDtoIn nota)
         {
             NotaEntity notaEntity;
 
-            notaEntity = await _notaRepositorio.ObtenerPorIdAsync(id);           
-            notaEntity.Nombre = nota.Nombre;
-            notaEntity.Estado = nota.Estado;
+            notaEntity = await _notaRepositorio.ObtenerPorIdAsync(id);        
             notaEntity.Tags = nota.Tags;
-            notaEntity.Contenido = nota.Contenido;
-            notaEntity.FechaFin = nota.FechaFin;
-            notaEntity.FechaInicio = nota.FechaInicio;
-            await _notaRepositorio.ActualizarAsync(notaEntity);
+            notaEntity.Valor01 = nota.Valor01;
+            notaEntity.Valor02 = nota.Valor02;
+            notaEntity.Valor03 = nota.Valor03;
+            notaEntity.Valor04 = nota.Valor04;
 
+            await _notaRepositorio.ActualizarAsync(notaEntity);
         }
     }
 

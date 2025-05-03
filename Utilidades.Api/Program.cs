@@ -4,6 +4,7 @@ using Peliculas.Bl;
 using System.Reflection;
 using Utilidades.Servicios.Helpers;
 using Notas.Helpers;
+using JwtTokenService.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,7 @@ builder.Services.AgregarServicios();
 builder.Services.AgregarCodigosPostales();
 builder.Services.AgregarPeliculas();
 builder.Services.AgregarNotas();
-
+builder.Services.AgregarAutenticacionJwt(builder.Configuration);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -45,6 +46,14 @@ builder.Services.AddSwaggerGen(gen =>
 
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     gen.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+});
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Yo merengues", policy =>
+    {
+        policy.RequireClaim("Role", "Yo merengues");
+    });
 });
 
 builder.Services.AddCors(options => options.AddPolicy("AllowWebApp", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));

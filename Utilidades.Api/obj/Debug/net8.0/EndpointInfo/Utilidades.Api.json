@@ -376,6 +376,150 @@
         }
       }
     },
+    "/api/InicioDeSesiones": {
+      "post": {
+        "tags": [
+          "InicioDeSesiones"
+        ],
+        "summary": "Retorna token",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InicioDeSesionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InicioDeSesionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InicioDeSesionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Notas": {
+      "get": {
+        "tags": [
+          "Notas"
+        ],
+        "summary": "Obtener todas las notas",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NotaDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NotaDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NotaDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Notas"
+        ],
+        "summary": "Agregar nota",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotaDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotaDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotaDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Notas"
+        ],
+        "summary": "Actualizar nota",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotaDtoIn"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotaDtoIn"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotaDtoIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v2/Peliculas": {
       "post": {
         "tags": [
@@ -651,6 +795,97 @@
             "nullable": true
           },
           "nombre": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InicioDeSesionDto": {
+        "type": "object",
+        "properties": {
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "contraseña": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotaDto": {
+        "required": [
+          "encodedKey",
+          "tags",
+          "valor01",
+          "valor02"
+        ],
+        "type": "object",
+        "properties": {
+          "tags": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "valor01": {
+            "maxLength": 1000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "valor02": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "valor03": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "valor04": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "encodedKey": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotaDtoIn": {
+        "required": [
+          "tags",
+          "valor01",
+          "valor02"
+        ],
+        "type": "object",
+        "properties": {
+          "tags": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "valor01": {
+            "maxLength": 1000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "valor02": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "valor03": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "valor04": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           }

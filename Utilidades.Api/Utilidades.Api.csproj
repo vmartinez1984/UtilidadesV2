@@ -16,11 +16,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.22" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\CodigosPostales.ReglasDeNegocio\CodigosPostales.ReglasDeNegocio.csproj" />
+		<ProjectReference Include="..\JwtTokenService\JwtTokenService.csproj" />
 		<ProjectReference Include="..\Notas\Notas.csproj" />
 		<ProjectReference Include="..\Peliculas.Bl\Peliculas.Bl.csproj" />
 		<ProjectReference Include="..\Utilidades.Servicios\Utilidades.Servicios.csproj" />

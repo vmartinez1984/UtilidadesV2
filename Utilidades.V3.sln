@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peliculas.Bl", "Peliculas.B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notas", "Notas\Notas.csproj", "{F169A0DC-3810-C0E6-A60A-C0DB6BCD265A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtTokenService", "JwtTokenService\JwtTokenService.csproj", "{CC4E310F-92BF-6816-A495-F226FD370232}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{F169A0DC-3810-C0E6-A60A-C0DB6BCD265A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F169A0DC-3810-C0E6-A60A-C0DB6BCD265A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F169A0DC-3810-C0E6-A60A-C0DB6BCD265A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC4E310F-92BF-6816-A495-F226FD370232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4E310F-92BF-6816-A495-F226FD370232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4E310F-92BF-6816-A495-F226FD370232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4E310F-92BF-6816-A495-F226FD370232}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

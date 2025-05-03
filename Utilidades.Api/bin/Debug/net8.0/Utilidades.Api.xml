@@ -98,6 +98,46 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Utilidades.Api.Controllers.InicioDeSesionesController.IniciarSesion(Utilidades.Api.Dtos.InicioDeSesionDto)">
+            <summary>
+            Retorna token
+            </summary>
+            <param name="inicioDeSesion"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Utilidades.Api.Controllers.NotasController">
+            <summary>
+            Crud de notas
+            </summary>
+            <param name="notaBl"></param>
+        </member>
+        <member name="M:Utilidades.Api.Controllers.NotasController.#ctor(Notas.BussinesLayer.NotaBl)">
+            <summary>
+            Crud de notas
+            </summary>
+            <param name="notaBl"></param>
+        </member>
+        <member name="M:Utilidades.Api.Controllers.NotasController.ObtenerAsync">
+            <summary>
+            Obtener todas las notas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Utilidades.Api.Controllers.NotasController.AgregarAsync(Notas.Dtos.NotaDto)">
+            <summary>
+            Agregar nota
+            </summary>
+            <param name="nota"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utilidades.Api.Controllers.NotasController.ActualizarAsync(System.String,Notas.Dtos.NotaDtoIn)">
+            <summary>
+            Actualizar nota
+            </summary>
+            <param name="id"></param>
+            <param name="nota"></param>
+            <returns></returns>
+        </member>
         <member name="M:Utilidades.Api.Controllers.PersonasFakesController.ObtenerPersonaFake(System.Int32)">
             <summary>
             Genera una persona fake con datos aleatorios

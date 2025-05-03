@@ -1,32 +1,31 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace Notas.Dtos
-{
-    public class NotaUpdateDto 
+{   
+    public class NotaDto: NotaDtoIn
     {
         [Required]
-        [MaxLength(100)]
-        public string Nombre { get; set; }
+        public string EncodedKey { get; set; } = Guid.NewGuid().ToString();
+    }
 
-        [Required]
-        [MaxLength(1000)]
-        public string Contenido { get; set; }
-
+    public class NotaDtoIn
+    {
         [Required]
         [MaxLength(100)]
         public string Tags { get; set; }
-                
-        [MaxLength(50)]
-        public string Estado { get; set; }
 
-        public DateTime? FechaInicio { get; set; }
-                
-        public DateTime? FechaFin { get; set; }
-    }
-
-    public class NotaDto: NotaUpdateDto
-    {
         [Required]
-        public Guid Id { get; set; } = Guid.NewGuid();
+        [MaxLength(1000)]
+        public string Valor01 { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        public string Valor02 { get; set; }
+
+        [MaxLength(100)]
+        public string Valor03 { get; set; }
+
+        [MaxLength(100)]
+        public string Valor04 { get; set; }        
     }
 }
