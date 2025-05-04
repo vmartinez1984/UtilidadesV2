@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PfwdkneOsno=",
+  "dgSpecHash": "lpRBNNzH3FM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\Utilidades.Api\\Utilidades.Api.csproj",
+  "projectFilePath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\UtilidadesV2\\Utilidades.Api\\Utilidades.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vmartinez\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\vmartinez\\.nuget\\packages\\firebaseauthentication.net\\4.1.0\\firebaseauthentication.net.4.1.0.nupkg.sha512",

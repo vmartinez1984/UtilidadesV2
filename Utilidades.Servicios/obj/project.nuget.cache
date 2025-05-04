@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dgR4mzvDcq8=",
+  "dgSpecHash": "VyuaTw4OndI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\Utilidades.Servicios\\Utilidades.Servicios.csproj",
+  "projectFilePath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\UtilidadesV2\\Utilidades.Servicios\\Utilidades.Servicios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vmartinez\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\vmartinez\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.4\\microsoft.extensions.configuration.abstractions.9.0.4.nupkg.sha512",

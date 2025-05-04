@@ -1036,11 +1036,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\CodigosPostales.ReglasDeNegocio\\CodigosPostales.ReglasDeNegocio.csproj",
+      "projectUniqueName": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\UtilidadesV2\\CodigosPostales.ReglasDeNegocio\\CodigosPostales.ReglasDeNegocio.csproj",
       "projectName": "CodigosPostales.ReglasDeNegocio",
-      "projectPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\CodigosPostales.ReglasDeNegocio\\CodigosPostales.ReglasDeNegocio.csproj",
+      "projectPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\UtilidadesV2\\CodigosPostales.ReglasDeNegocio\\CodigosPostales.ReglasDeNegocio.csproj",
       "packagesPath": "C:\\Users\\vmartinez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\CodigosPostales.ReglasDeNegocio\\obj\\",
+      "outputPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\UtilidadesV2\\CodigosPostales.ReglasDeNegocio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1062,8 +1062,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\CodigosPostales.Repositorios\\CodigosPostales.Repositorios.csproj": {
-              "projectPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\CodigosPostales.Repositorios\\CodigosPostales.Repositorios.csproj"
+            "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\UtilidadesV2\\CodigosPostales.Repositorios\\CodigosPostales.Repositorios.csproj": {
+              "projectPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\UtilidadesV2\\CodigosPostales.Repositorios\\CodigosPostales.Repositorios.csproj"
             }
           }
         }
@@ -1078,7 +1078,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -1113,7 +1113,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

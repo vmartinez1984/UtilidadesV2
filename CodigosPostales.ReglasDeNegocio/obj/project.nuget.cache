@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+gYxP+tx6Pk=",
+  "dgSpecHash": "b98gceMU1bY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\CodigosPostales.ReglasDeNegocio\\CodigosPostales.ReglasDeNegocio.csproj",
+  "projectFilePath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\UtilidadesV2\\CodigosPostales.ReglasDeNegocio\\CodigosPostales.ReglasDeNegocio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vmartinez\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\vmartinez\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.4\\microsoft.extensions.configuration.abstractions.9.0.4.nupkg.sha512",
