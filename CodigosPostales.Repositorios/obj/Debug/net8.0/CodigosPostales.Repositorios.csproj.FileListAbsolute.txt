@@ -23,16 +23,3 @@ C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\CodigosPostales.Repo
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\CodigosPostales.Repositorios\obj\Debug\net8.0\refint\CodigosPostales.Repositorios.dll
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\CodigosPostales.Repositorios\obj\Debug\net8.0\CodigosPostales.Repositorios.pdb
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\CodigosPostales.Repositorios\obj\Debug\net8.0\ref\CodigosPostales.Repositorios.dll
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\bin\Debug\net8.0\CodigosPostales.Repositorios.deps.json
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\bin\Debug\net8.0\CodigosPostales.Repositorios.dll
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\bin\Debug\net8.0\CodigosPostales.Repositorios.pdb
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\obj\Debug\net8.0\CodigosPostales.Repositorios.csproj.AssemblyReference.cache
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\obj\Debug\net8.0\CodigosPostales.Repositorios.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\obj\Debug\net8.0\CodigosPostales.Repositorios.AssemblyInfoInputs.cache
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\obj\Debug\net8.0\CodigosPostales.Repositorios.AssemblyInfo.cs
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\obj\Debug\net8.0\CodigosPostales.Repositorios.csproj.CoreCompileInputs.cache
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\obj\Debug\net8.0\CodigosPostales.Repositorios.sourcelink.json
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\obj\Debug\net8.0\CodigosPostales.Repositorios.dll
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\obj\Debug\net8.0\refint\CodigosPostales.Repositorios.dll
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\obj\Debug\net8.0\CodigosPostales.Repositorios.pdb
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\CodigosPostales.Repositorios\obj\Debug\net8.0\ref\CodigosPostales.Repositorios.dll

@@ -11,16 +11,3 @@ C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\JwtTokenService\obj\
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\JwtTokenService\obj\Debug\net6.0\refint\JwtTokenService.dll
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\JwtTokenService\obj\Debug\net6.0\JwtTokenService.pdb
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\JwtTokenService\obj\Debug\net6.0\ref\JwtTokenService.dll
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\bin\Debug\net6.0\JwtTokenService.deps.json
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\bin\Debug\net6.0\JwtTokenService.dll
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\bin\Debug\net6.0\JwtTokenService.pdb
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\obj\Debug\net6.0\JwtTokenService.csproj.AssemblyReference.cache
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\obj\Debug\net6.0\JwtTokenService.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\obj\Debug\net6.0\JwtTokenService.AssemblyInfoInputs.cache
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\obj\Debug\net6.0\JwtTokenService.AssemblyInfo.cs
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\obj\Debug\net6.0\JwtTokenService.csproj.CoreCompileInputs.cache
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\obj\Debug\net6.0\JwtTokenService.sourcelink.json
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\obj\Debug\net6.0\JwtTokenService.dll
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\obj\Debug\net6.0\refint\JwtTokenService.dll
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\obj\Debug\net6.0\JwtTokenService.pdb
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\JwtTokenService\obj\Debug\net6.0\ref\JwtTokenService.dll

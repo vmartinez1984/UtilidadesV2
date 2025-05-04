@@ -23,16 +23,3 @@ C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Repositor
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Repositorios\obj\Debug\net8.0\refint\Utilidades.Repositorios.dll
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Repositorios\obj\Debug\net8.0\Utilidades.Repositorios.pdb
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Repositorios\obj\Debug\net8.0\ref\Utilidades.Repositorios.dll
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\bin\Debug\net8.0\Utilidades.Repositorios.deps.json
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\bin\Debug\net8.0\Utilidades.Repositorios.dll
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\bin\Debug\net8.0\Utilidades.Repositorios.pdb
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\obj\Debug\net8.0\Utilidades.Repositorios.csproj.AssemblyReference.cache
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\obj\Debug\net8.0\Utilidades.Repositorios.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\obj\Debug\net8.0\Utilidades.Repositorios.AssemblyInfoInputs.cache
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\obj\Debug\net8.0\Utilidades.Repositorios.AssemblyInfo.cs
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\obj\Debug\net8.0\Utilidades.Repositorios.csproj.CoreCompileInputs.cache
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\obj\Debug\net8.0\Utilidades.Repositorios.sourcelink.json
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\obj\Debug\net8.0\Utilidades.Repositorios.dll
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\obj\Debug\net8.0\refint\Utilidades.Repositorios.dll
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\obj\Debug\net8.0\Utilidades.Repositorios.pdb
-C:\Users\vmartinez\source\repos\vmartinez1984\UtilidadesV2\Utilidades.Repositorios\obj\Debug\net8.0\ref\Utilidades.Repositorios.dll
