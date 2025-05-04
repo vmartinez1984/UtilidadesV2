@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JwtTokenService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dde8239d5804a7241adbc0990ba1dfb7d524cfbf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe5ec31bac5de6bf2a74b73ce7c0bfe2e3cbc3ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("JwtTokenService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JwtTokenService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
