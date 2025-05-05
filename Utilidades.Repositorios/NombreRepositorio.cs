@@ -21,7 +21,7 @@ namespace Utilidades.Repositorios
             var mongoClient = new MongoClient(stringConnection);
             string databaseName = stringConnection.Split("/").Last().Split("?").First();
             _mongoDatabase = mongoClient.GetDatabase(databaseName);
-            _collection = _mongoDatabase.GetCollection<ApellidoNombre>("NombreApellidosMx");
+            _collection = _mongoDatabase.GetCollection<ApellidoNombre>("NombresApellidosMx");
         }
         internal async Task AgregarAsync(List<ApellidoNombre> lista)
         {
