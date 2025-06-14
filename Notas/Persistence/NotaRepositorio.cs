@@ -7,7 +7,8 @@ namespace Notas.Persistence
     public class NotaRepositorio
     {
         private readonly IMongoDatabase _mongoDatabase;
-        private readonly IMongoCollection<NotaEntity> _collection;
+        private IMongoCollection<NotaEntity> _collection;
+
         public NotaRepositorio(IConfiguration configuration)
         {
             string stringConnection = configuration.GetConnectionString("Utilidades");
@@ -17,11 +18,14 @@ namespace Notas.Persistence
             _collection = _mongoDatabase.GetCollection<NotaEntity>("NotasV2");
         }
 
-        public async Task<List<NotaEntity>> ObtenerTodosAsync()
+        public async Task<List<NotaEntity>> ObtenerTodosAsync(string carpeta)
         {
             List<NotaEntity> notas;
-
-            notas = (await _collection.FindAsync(_ => true)).ToList();
+            if(string.IsNullOrEmpty(carpeta)) 
+                notas = (await _collection.FindAsync(_ => true)).ToList();
+                //notas = (await _collection.FindAsync(x => x.Carpeta == null)).ToList();
+            else
+                notas = (await _collection.FindAsync(x=> x.Carpeta == carpeta)).ToList();
 
             return notas;
         }
@@ -41,6 +45,11 @@ namespace Notas.Persistence
         public async Task ActualizarAsync(NotaEntity notaEntity)
         {
             await _collection.ReplaceOneAsync(x => x.EncodedKey == notaEntity.EncodedKey, notaEntity);
+        }
+
+        internal void AgregarColeccion(string v)
+        {
+            _collection = _mongoDatabase.GetCollection<NotaEntity>(v);
         }
     }
 }

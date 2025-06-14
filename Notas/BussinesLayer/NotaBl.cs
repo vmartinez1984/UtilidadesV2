@@ -10,14 +10,14 @@ namespace Notas.BussinesLayer
 
         public NotaBl(NotaRepositorio notaRepositorio)
         {
-            _notaRepositorio = notaRepositorio;
+            _notaRepositorio = notaRepositorio;            
         }
 
-        public async Task<List<NotaDto>> ObtenerAsync()
+        public async Task<List<NotaDto>> ObtenerAsync(string carpeta = null)
         {
             List<NotaDto> notas;
 
-            notas = (await _notaRepositorio.ObtenerTodosAsync()).Select(x => new NotaDto
+            notas = (await _notaRepositorio.ObtenerTodosAsync(carpeta)).Select(x => new NotaDto
             {
                 Tags = x.Tags,
                 Valor01 = x.Valor01,
@@ -30,10 +30,11 @@ namespace Notas.BussinesLayer
             return notas;
         }
 
-        public async Task<string> AgregarAsync(NotaDto notaDto) => await _notaRepositorio.AgregarAsync(new NotaEntity
+        public async Task<string> AgregarAsync(NotaDto notaDto, string carpeta = null) => await _notaRepositorio.AgregarAsync(new NotaEntity
         {
             Tags = notaDto.Tags,
             EncodedKey = notaDto.EncodedKey,
+            Carpeta = carpeta,
             Valor01 = notaDto.Valor01,
             Valor02 = notaDto.Valor02,
             Valor03 = notaDto.Valor03,
@@ -52,6 +53,11 @@ namespace Notas.BussinesLayer
             notaEntity.Valor04 = nota.Valor04;
 
             await _notaRepositorio.ActualizarAsync(notaEntity);
+        }
+
+        public void AgregarColeccion(string v)
+        {
+            _notaRepositorio.AgregarColeccion(v);
         }
     }
 

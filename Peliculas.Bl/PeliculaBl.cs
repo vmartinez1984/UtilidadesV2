@@ -23,7 +23,8 @@
             if (pelicula.Poster is not null)
             {
                 string ruta;
-
+                if(string.IsNullOrEmpty(pelicula1.NombreDelArchivo))
+                    pelicula1.NombreDelArchivo = $"{Guid.NewGuid()}{Path.GetExtension(pelicula.Poster.FileName)}";
                 ruta = await _almacenDeArchivos.ActualizarArchivoAsync(pelicula1.NombreDelArchivo, pelicula.Poster);
 
                 pelicula1.Poster = ruta;
@@ -54,6 +55,17 @@
             return id;
         }
 
+        public async Task MarcarAsync(int id, bool vista)
+        {
+            Pelicula pelicula1;
+
+            pelicula1 = await _repositorio.ObtenerAsync(id);
+            if (vista)
+                pelicula1.FechaDeVista = DateTime.Now;
+            else
+                pelicula1.FechaDeVista = null;
+            await _repositorio.ActualizarAsync(pelicula1);
+        }
 
         public async Task<List<PeliculaDto>> ObtenerAsync() => (await _repositorio.ObtenerAsync()).ToDtos();
 

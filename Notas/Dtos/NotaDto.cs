@@ -15,7 +15,7 @@ namespace Notas.Dtos
         public string Tags { get; set; }
 
         [Required]
-        [MaxLength(1000)]
+        [MaxLength(2048)]
         public string Valor01 { get; set; }
 
         [Required]

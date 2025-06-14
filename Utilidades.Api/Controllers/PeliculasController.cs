@@ -31,7 +31,8 @@ namespace Utilidades.Api.Controllers
             PeliculaDto peliculas;
 
             peliculas = await _pelicula.ObtenerAsync(id);
-
+            if (peliculas is null)
+                return NotFound(new { Mensaje = "Nel carnal, no te la vengo manejando" });
             return Ok(peliculas);
         }
 
@@ -47,11 +48,18 @@ namespace Utilidades.Api.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> ObtnerAsync()
+        public async Task<IActionResult> ObtnerAsync(bool? vista = null)
         {
             List<PeliculaDto> peliculas;
 
             peliculas = await _pelicula.ObtenerAsync();
+            if(vista is not null)
+            {
+                if (vista == true)
+                    peliculas = peliculas.Where(x => x.FechaDeVista != null).ToList();
+                else
+                    peliculas = peliculas.Where(x => x.FechaDeVista == null).ToList();
+            }
 
             return Ok(peliculas);
         }
@@ -60,6 +68,20 @@ namespace Utilidades.Api.Controllers
         public async Task<IActionResult> ActualizarAsync(int id, [FromForm] PeliculaDtoIn pelicula)
         {
             await _pelicula.ActualizarAsync(id, pelicula);
+
+            return Accepted();
+        }
+
+        [HttpPut("{id}/Vistas/{vista}")]
+        public async Task<IActionResult> ActualizarAsync(int id, bool vista)
+        {
+            PeliculaDto peliculas;
+
+            peliculas = await _pelicula.ObtenerAsync(id);
+            if (peliculas is null)
+                return NotFound(new { Mensaje = "Nel carnal, no te la vengo manejando" });
+
+            await _pelicula.MarcarAsync(id, vista);
 
             return Accepted();
         }

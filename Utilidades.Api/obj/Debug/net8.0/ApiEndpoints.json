@@ -327,6 +327,79 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Utilidades.Api.Controllers.NotasV3Controller",
+    "Method": "ObtenerAsync",
+    "RelativePath": "api/Notas/V3/{carpeta}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carpeta",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Notas.Dtos.NotaDto, Notas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.NotasV3Controller",
+    "Method": "AgregarAsync",
+    "RelativePath": "api/Notas/V3/{carpeta}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carpeta",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "nota",
+        "Type": "Notas.Dtos.NotaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.NotasV3Controller",
+    "Method": "ActualizarAsync",
+    "RelativePath": "api/Notas/V3/{carpeta}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carpeta",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nota",
+        "Type": "Notas.Dtos.NotaDtoIn",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Utilidades.Api.Controllers.PersonasFakesController",
     "Method": "ObtenerPersonaFake",
     "RelativePath": "api/PersonasFakes",
@@ -395,7 +468,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "vista",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -466,6 +545,27 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PeliculasController",
+    "Method": "ActualizarAsync",
+    "RelativePath": "api/v2/Peliculas/{id}/Vistas/{vista}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "vista",
+        "Type": "System.Boolean",
         "IsRequired": true
       }
     ],

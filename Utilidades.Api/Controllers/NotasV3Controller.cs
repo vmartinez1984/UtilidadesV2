@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Notas.BussinesLayer;
 using Notas.Dtos;
+using System.ComponentModel.DataAnnotations;
 
 namespace Utilidades.Api.Controllers
 {
@@ -10,32 +9,32 @@ namespace Utilidades.Api.Controllers
     /// Crud de notas
     /// </summary>
     /// <param name="notaBl"></param>
-    [Route("api/[controller]")]
+    [Route("api/Notas/V3")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Yo merengues")]
-    public class NotasController : ControllerBase
+    public class NotasV3Controller : ControllerBase
     {
         private readonly NotaBl _notaBl;
 
-        public NotasController(NotaBl notaBl)
+        public NotasV3Controller(NotaBl notaBl)
         {
-            _notaBl = notaBl;            
+            _notaBl = notaBl;
+            _notaBl.AgregarColeccion("NotasV3");
         }
 
         /// <summary>
         /// Obtener todas las notas
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
-        public async Task<List<NotaDto>> ObtenerAsync() => await _notaBl.ObtenerAsync();
+        [HttpGet("{carpeta}")]
+        public async Task<List<NotaDto>> ObtenerAsync([Required] string carpeta) => await _notaBl.ObtenerAsync(carpeta);
 
         /// <summary>
         /// Agregar nota
         /// </summary>
         /// <param name="nota"></param>
         /// <returns></returns>
-        [HttpPost]
-        public async Task<IActionResult> AgregarAsync(NotaDto nota) => Ok(new { Id = await _notaBl.AgregarAsync(nota) });
+        [HttpPost("{carpeta}")]
+        public async Task<IActionResult> AgregarAsync([Required] string carpeta, NotaDto nota) => Ok(new { Id = await _notaBl.AgregarAsync( nota, carpeta) });
 
         /// <summary>
         /// Actualizar nota
@@ -43,8 +42,8 @@ namespace Utilidades.Api.Controllers
         /// <param name="id"></param>
         /// <param name="nota"></param>
         /// <returns></returns>
-        [HttpPut]
-        public async Task<IActionResult> ActualizarAsync(string id, NotaDtoIn nota)
+        [HttpPut("{carpeta}")]
+        public async Task<IActionResult> ActualizarAsync([Required] string carpeta, string id, NotaDtoIn nota)
         {
             await _notaBl.Actaulizar(id, nota);
 

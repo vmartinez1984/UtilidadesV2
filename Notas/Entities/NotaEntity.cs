@@ -15,6 +15,9 @@ namespace Notas.Entities
         [BsonElement("tags")]
         public string Tags { get; set; }
 
+        [BsonElement("carpeta")]
+        public string Carpeta { get; set; }
+
         [BsonElement("valor01")]
         public string Valor01 { get; set; }
 

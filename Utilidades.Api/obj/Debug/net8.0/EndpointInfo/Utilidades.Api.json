@@ -520,6 +520,145 @@
         }
       }
     },
+    "/api/Notas/V3/{carpeta}": {
+      "get": {
+        "tags": [
+          "NotasV3"
+        ],
+        "summary": "Obtener todas las notas",
+        "parameters": [
+          {
+            "name": "carpeta",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NotaDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NotaDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NotaDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "NotasV3"
+        ],
+        "summary": "Agregar nota",
+        "parameters": [
+          {
+            "name": "carpeta",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotaDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotaDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotaDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "NotasV3"
+        ],
+        "summary": "Actualizar nota",
+        "parameters": [
+          {
+            "name": "carpeta",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotaDtoIn"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotaDtoIn"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotaDtoIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v2/Peliculas": {
       "post": {
         "tags": [
@@ -579,6 +718,15 @@
       "get": {
         "tags": [
           "Peliculas"
+        ],
+        "parameters": [
+          {
+            "name": "vista",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -689,6 +837,37 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v2/Peliculas/{id}/Vistas/{vista}": {
+      "put": {
+        "tags": [
+          "Peliculas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "vista",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "boolean"
             }
           }
         ],
@@ -830,7 +1009,7 @@
             "type": "string"
           },
           "valor01": {
-            "maxLength": 1000,
+            "maxLength": 2048,
             "minLength": 1,
             "type": "string"
           },
@@ -870,7 +1049,7 @@
             "type": "string"
           },
           "valor01": {
-            "maxLength": 1000,
+            "maxLength": 2048,
             "minLength": 1,
             "type": "string"
           },
