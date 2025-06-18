@@ -93,3 +93,5 @@ C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\D
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\Utilidades.Api.pdb
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\Utilidades.Api.genruntimeconfig.cache
 C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\obj\Debug\net8.0\ref\Utilidades.Api.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\ProductoBusinessLayer.dll
+C:\Users\vmartinez\source\repos\vmartinez1984\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\ProductoBusinessLayer.pdb

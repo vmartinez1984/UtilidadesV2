@@ -5,6 +5,7 @@ using System.Reflection;
 using Utilidades.Servicios.Helpers;
 using Notas.Helpers;
 using JwtTokenService.Helpers;
+using ProductoBusinessLayer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ builder.Services.AgregarServicios();
 builder.Services.AgregarCodigosPostales();
 builder.Services.AgregarPeliculas();
 builder.Services.AgregarNotas();
+builder.Services.AgregarProductos();
 builder.Services.AgregarAutenticacionJwt(builder.Configuration);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

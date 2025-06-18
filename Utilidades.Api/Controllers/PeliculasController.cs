@@ -46,7 +46,6 @@ namespace Utilidades.Api.Controllers
             return File(bytes, "image/png");
         }
 
-
         [HttpGet]
         public async Task<IActionResult> ObtnerAsync(bool? vista = null)
         {

@@ -327,79 +327,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Utilidades.Api.Controllers.NotasV3Controller",
-    "Method": "ObtenerAsync",
-    "RelativePath": "api/Notas/V3/{carpeta}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "carpeta",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[Notas.Dtos.NotaDto, Notas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Utilidades.Api.Controllers.NotasV3Controller",
-    "Method": "AgregarAsync",
-    "RelativePath": "api/Notas/V3/{carpeta}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "carpeta",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "nota",
-        "Type": "Notas.Dtos.NotaDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Utilidades.Api.Controllers.NotasV3Controller",
-    "Method": "ActualizarAsync",
-    "RelativePath": "api/Notas/V3/{carpeta}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "carpeta",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "nota",
-        "Type": "Notas.Dtos.NotaDtoIn",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Utilidades.Api.Controllers.PersonasFakesController",
     "Method": "ObtenerPersonaFake",
     "RelativePath": "api/PersonasFakes",
@@ -411,6 +338,85 @@
         "Name": "numeroDePersonas",
         "Type": "System.Int32",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.ProductosController",
+    "Method": "GetById",
+    "RelativePath": "api/Productos/{idEncodedKey}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEncodedKey",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.ProductosController",
+    "Method": "Put",
+    "RelativePath": "api/Productos/{idEncodedKey}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEncodedKey",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "producto",
+        "Type": "ProductoBusinessLayer.ProductoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.ProductosController",
+    "Method": "Delete",
+    "RelativePath": "api/Productos/{idEncodedKey}/Activos/{estaActivo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEncodedKey",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "estaActivo",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.ProductosController",
+    "Method": "Post",
+    "RelativePath": "api/Productos/{Llave}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "producto",
+        "Type": "ProductoBusinessLayer.ProductoDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "llave",
+        "Type": "System.String",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -566,6 +572,22 @@
       {
         "Name": "vista",
         "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.ProductosController",
+    "Method": "Get",
+    "RelativePath": "Llaves/{llave}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "llave",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
