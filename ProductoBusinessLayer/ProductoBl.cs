@@ -33,6 +33,7 @@ namespace ProductoBusinessLayer
         public async Task<string> AgregarAsync(ProductoDto notaDto, string carpeta = null) => await _repositorio.AgregarAsync(new ProductoEntity
         {            
             EncodedKey = notaDto.EncodedKey,            
+            Llave = carpeta,
             Valor01 = notaDto.Valor01,
             Valor02 = notaDto.Valor02,
             Valor03 = notaDto.Valor03,

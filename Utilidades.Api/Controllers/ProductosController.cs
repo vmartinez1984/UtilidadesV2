@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using ProductoBusinessLayer;
 using System.ComponentModel.DataAnnotations;
 
@@ -30,7 +29,7 @@ namespace Utilidades.Api.Controllers
         {
             var data = await _productoBl.AgregarAsync(producto, llave);
 
-            return Created("", new { FechaDeRegistro = DateTime.Now, Id = data });
+            return Created("", new { FechaDeRegistro = DateTime.Now, Id = data, EncodedKey = producto.EncodedKey });
         }
 
         [HttpGet("{idEncodedKey}")]
@@ -53,7 +52,7 @@ namespace Utilidades.Api.Controllers
         [HttpDelete("{idEncodedKey}/Activos/{estaActivo}")]
         public async Task<IActionResult> Delete(string idEncodedKey, bool estaActivo)
         {
-            await _productoBl.ActivarAsync(idEncodedKey,estaActivo);
+            await _productoBl.ActivarAsync(idEncodedKey, estaActivo);
 
             return NoContent();
         }

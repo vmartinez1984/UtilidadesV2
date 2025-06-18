@@ -54,12 +54,17 @@ namespace ProductoBusinessLayer
             if (int.TryParse(idEncodedKJey, out int id))
                 return (await _collection.FindAsync(x => x.Id == id)).FirstOrDefault();
             else
-                return (await _collection.FindAsync(x => x.EncodedKey == idEncodedKJey)).FirstOrDefault();
+            {
+                var entity = await _collection.Find(x => x.EncodedKey == idEncodedKJey).FirstOrDefaultAsync();
+                if (entity is not null)
+                    return entity;
+                return await _collection.Find(x => x._id == idEncodedKJey).FirstOrDefaultAsync();
+            }
         }
 
         public async Task ActualizarAsync(ProductoEntity entity)
         {
             await _collection.ReplaceOneAsync(x => x.EncodedKey == entity.EncodedKey, entity);
-        }        
+        }
     }
 }
