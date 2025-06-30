@@ -21,10 +21,14 @@ direcciones
 
 Se esta usando Mysql para als personas fakes, pero se pretende migrar a MongoDb por las ventajas que ofrece.
 
-# Todo
-* Diagramas
-* Agregar 
-* Presentacion grpc
-* Presentacion soap
-* Agregar los respaldo de las bases
-* Agregar los archivo de docker y compose
+## Todo
+- [ ] Agregar el endpoint para mx y es
+- [ ] Diagramas
+- [ ] Hacer uno solo para clabes y tarjetas bacnarias.
+- [ ] Unir Nota y sesion
+- [ ] Mejorar productos
+- [ ] Agregar
+- [ ] Presentacion grpc
+- [ ] Presentacion soap
+- [ ] Agregar los respaldo de las bases
+- [ ] Agregar los archivo de docker y compose
