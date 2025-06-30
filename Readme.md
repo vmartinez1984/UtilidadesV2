@@ -32,3 +32,5 @@ Se esta usando Mysql para als personas fakes, pero se pretende migrar a MongoDb 
 - [ ] Presentacion soap
 - [ ] Agregar los respaldo de las bases
 - [ ] Agregar los archivo de docker y compose
+- [ ] Agregar webhook
+- [ ] Agregar un servicio delogs simple
