@@ -27,7 +27,7 @@ namespace Utilidades.Api.Controllers
 
             clabe = _servicio.GenerarClabe(ahorroId);
 
-            return Created("", new { Clabe = clabe });
+            return Created("", new { Clabe = clabe, Fecha = DateTime.Now });
         }
     }
 }

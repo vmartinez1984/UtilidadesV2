@@ -6804,23 +6804,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vmartinez\\.nuget\\packages\\": {},
+    "C:\\Users\\ahal_\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "3.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\Utilidades.Api\\Utilidades.Api.csproj",
+      "projectUniqueName": "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\Utilidades.Api\\Utilidades.Api.csproj",
       "projectName": "Utilidades.Api",
-      "projectPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\Utilidades.Api\\Utilidades.Api.csproj",
-      "packagesPath": "C:\\Users\\vmartinez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\Utilidades.Api\\obj\\",
+      "projectPath": "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\Utilidades.Api\\Utilidades.Api.csproj",
+      "packagesPath": "C:\\Users\\ahal_\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\Utilidades.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\vmartinez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ahal_\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6836,23 +6836,23 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\CodigosPostales.ReglasDeNegocio\\CodigosPostales.ReglasDeNegocio.csproj": {
-              "projectPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\CodigosPostales.ReglasDeNegocio\\CodigosPostales.ReglasDeNegocio.csproj"
+            "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\CodigosPostales.ReglasDeNegocio\\CodigosPostales.ReglasDeNegocio.csproj": {
+              "projectPath": "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\CodigosPostales.ReglasDeNegocio\\CodigosPostales.ReglasDeNegocio.csproj"
             },
-            "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\JwtTokenService\\JwtTokenService.csproj": {
-              "projectPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\JwtTokenService\\JwtTokenService.csproj"
+            "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\JwtTokenService\\JwtTokenService.csproj": {
+              "projectPath": "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\JwtTokenService\\JwtTokenService.csproj"
             },
-            "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\Notas\\Notas.csproj": {
-              "projectPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\Notas\\Notas.csproj"
+            "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\Notas\\Notas.csproj": {
+              "projectPath": "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\Notas\\Notas.csproj"
             },
-            "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\Peliculas.Bl\\Peliculas.Bl.csproj": {
-              "projectPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\Peliculas.Bl\\Peliculas.Bl.csproj"
+            "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\Peliculas.Bl\\Peliculas.Bl.csproj": {
+              "projectPath": "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\Peliculas.Bl\\Peliculas.Bl.csproj"
             },
-            "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\ProductoBusinessLayer\\ProductoBusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\ProductoBusinessLayer\\ProductoBusinessLayer.csproj"
+            "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\ProductoBusinessLayer\\ProductoBusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\ProductoBusinessLayer\\ProductoBusinessLayer.csproj"
             },
-            "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\Utilidades.Servicios\\Utilidades.Servicios.csproj": {
-              "projectPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\Utilidades.V3\\Utilidades.Servicios\\Utilidades.Servicios.csproj"
+            "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\Utilidades.Servicios\\Utilidades.Servicios.csproj": {
+              "projectPath": "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\Utilidades.Servicios\\Utilidades.Servicios.csproj"
             }
           }
         }
@@ -6867,7 +6867,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -6901,7 +6901,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

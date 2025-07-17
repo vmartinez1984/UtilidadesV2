@@ -339,6 +339,46 @@
         }
       }
     },
+    "/api/Curp": {
+      "post": {
+        "tags": [
+          "Curp"
+        ],
+        "summary": "Genera el curp",
+        "requestBody": {
+          "description": "Sexo: m / h. m para mujer, h para hombre.\r\n            Para el estado: Aguascalientes, Baja_California, Baja_California_Sur, Campeche, Coahuila, Colima, Chiapas, Chihuahua, Distrito_Federal, Durango, Guanajuato, Guerrero, Hidalgo, Jalisco, Mexico, Michoacan, Morelos, Nayarit, Nuevo_Leon, Oaxaca, Puebla, Queretaro, Quintana_Roo, San_Luis_Potosi, Sinaloa, Sonora, Tabasco, Tamaulipas, Tlaxcala, Veracruz, Yucatan, Zacatecas, Extranjero",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SolicitudDeCurp"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SolicitudDeCurp"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SolicitudDeCurp"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurpDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Direcciones": {
       "get": {
         "tags": [
@@ -981,6 +1021,20 @@
         },
         "additionalProperties": false
       },
+      "CurpDto": {
+        "type": "object",
+        "properties": {
+          "curp": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
       "Estado": {
         "type": "object",
         "properties": {
@@ -1118,6 +1172,50 @@
           },
           "estaActivo": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SolicitudDeCurp": {
+        "required": [
+          "estado",
+          "fechaDeNacimiento",
+          "nombres",
+          "primerApellido",
+          "sexo"
+        ],
+        "type": "object",
+        "properties": {
+          "nombres": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "primerApellido": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "segundoApellido": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "fechaDeNacimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sexo": {
+            "maxLength": 1,
+            "minLength": 1,
+            "pattern": "^[HhMm]$",
+            "type": "string",
+            "description": "H, M"
+          },
+          "estado": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Aguascalientes, Baja_California, Baja_California_Sur, Campeche, Coahuila, Colima, Chiapas, Chihuahua, Distrito_Federal, Durango, Guanajuato, Guerrero, Hidalgo, Jalisco, Mexico, Michoacan, Morelos, Nayarit, Nuevo_Leon, Oaxaca, Puebla, Queretaro, Quintana_Roo, San_Luis_Potosi, Sinaloa, Sonora, Tabasco, Tamaulipas, Tlaxcala, Veracruz, Yucatan, Zacatecas, Extranjero"
           }
         },
         "additionalProperties": false

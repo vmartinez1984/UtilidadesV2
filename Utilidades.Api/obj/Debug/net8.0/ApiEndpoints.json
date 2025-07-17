@@ -228,6 +228,30 @@
     ]
   },
   {
+    "ContainingType": "Utilidades.Api.Controllers.CurpController",
+    "Method": "GenerarCurp",
+    "RelativePath": "api/Curp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "solicitud",
+        "Type": "Utilidades.Api.Controllers.SolicitudDeCurp",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Utilidades.Api.Controllers.CurpDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Utilidades.Api.Controllers.DireccionesController",
     "Method": "ObtenerDirecciones",
     "RelativePath": "api/Direcciones",

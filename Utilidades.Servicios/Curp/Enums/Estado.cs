@@ -22,75 +22,97 @@ namespace Utilidades.Servicios.Curp.Enums
 
         [EnumMember(Value = "Baja California")]
         Baja_California = 2,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Baja California Sur")]
         Baja_California_Sur = 3,
 
-        [EnumMember(Value = "Aguascalientes")]
+        [EnumMember(Value = "Campeche")]
         Campeche = 4,
 
-        [EnumMember(Value = "Aguascalientes")]
+        [EnumMember(Value = "Coahuila")]
         Coahuila = 5,
 
-        [EnumMember(Value = "Aguascalientes")]
+        [EnumMember(Value = "Colima")]
         Colima = 6,
 
-        [EnumMember(Value = "Aguascalientes")]
+        [EnumMember(Value = "Chiapas")]
         Chiapas = 7,
 
-        [EnumMember(Value = "Aguascalientes")]
+        [EnumMember(Value = "Chihuahua")]
         Chihuahua = 8,
 
-        [EnumMember(Value = "Aguascalientes")]
+        [EnumMember(Value = "Ciudad de México")]
         Distrito_Federal = 9,
 
-        [EnumMember(Value = "Aguascalientes")]
+        [EnumMember(Value = "Durango")]
         Durango = 10,
 
-        [EnumMember(Value = "Aguascalientes")]
+        [EnumMember(Value = "Guanajuato")]
         Guanajuato = 11,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Guerrero")]
         Guerrero = 12,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Hidalgo")]
         Hidalgo = 13,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Jalisco")]
         Jalisco = 14,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Mexico")]
         Mexico = 15,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Michoacan")]
         Michoacan = 16,
-        [EnumMember(Value = "Aguascalientes")]
+        [EnumMember(Value = "Morelos")]
         Morelos = 17,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Nayarit")]
         Nayarit = 18,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Nuevo_Leon")]
         Nuevo_Leon = 19,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Oaxaca")]
         Oaxaca = 20,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Puebla")]
         Puebla = 21,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Queretaro")]
         Queretaro = 22,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Quintana_Roo")]
         Quintana_Roo = 23,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "San_Luis_Potosi")]
         San_Luis_Potosi = 24,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Sinaloa")]
         Sinaloa = 25,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Sonora")]
         Sonora = 26,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Tabasco")]
         Tabasco = 27,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Tamaulipas")]
         Tamaulipas = 28,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Tlaxcala")]
         Tlaxcala = 29,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Veracruz")]
         Veracruz = 30,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Yucatan")]
         Yucatan = 31,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Zacatecas")]
         Zacatecas = 32,
-        [EnumMember(Value = "Aguascalientes")]
+
+        [EnumMember(Value = "Extranjero")]
         Extranjero = 33
     }
 }

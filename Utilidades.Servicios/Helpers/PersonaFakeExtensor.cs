@@ -11,6 +11,7 @@ namespace Utilidades.Servicios.Helpers
 
             services.AddScoped<PersonaFakeServicio>();
             services.AddScoped<DireccionServicio>();
+            services.AddScoped<ClabeServicio>();
         }
     }
 }
