@@ -5,8 +5,12 @@ using Utilidades.Servicios.Curp.Enums;
 
 namespace Utilidades.Api.Controllers
 {
+    /// <summary>
+    /// controller para el curp
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
+    [ApiExplorerSettings(GroupName = "v1")]
     public class CurpController : ControllerBase
     {
         /// <summary>
@@ -41,8 +45,6 @@ namespace Utilidades.Api.Controllers
 
             return Created("", new CurpDto(curp));
         }
-
-
     }
 
     public class CurpDto

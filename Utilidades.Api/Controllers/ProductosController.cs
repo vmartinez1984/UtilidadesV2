@@ -6,6 +6,7 @@ namespace Utilidades.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ApiExplorerSettings(GroupName = "cruds")]
     public class ProductosController : ControllerBase
     {
         private readonly ProductoBl _productoBl;
@@ -24,8 +25,8 @@ namespace Utilidades.Api.Controllers
             return Ok(lista);
         }
 
-        [HttpPost("{Llave}")]
-        public async Task<IActionResult> Post(ProductoDto producto, [Required] string llave)
+        [HttpPost("{llave}")]
+        public async Task<IActionResult> Post(ProductoDtoIn producto, [Required] string llave)
         {
             var data = await _productoBl.AgregarAsync(producto, llave);
 

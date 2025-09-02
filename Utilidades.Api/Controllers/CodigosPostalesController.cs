@@ -10,6 +10,7 @@ namespace Utilidades.Api.Controllers
     /// </summary>
     [ApiController]
     [Route("api/[controller]")]
+    [ApiExplorerSettings(GroupName = "v1")]
     public class CodigosPostalesController : ControllerBase
     {
         private readonly ICodigoPostalRdn _repositorio;

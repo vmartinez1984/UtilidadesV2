@@ -8,11 +8,11 @@ namespace Utilidades.Api.Controllers
 {
     /// <summary>
     /// Crud de notas
-    /// </summary>
-    /// <param name="notaBl"></param>
+    /// </summary>    
     [Route("api/[controller]")]
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Yo merengues")]
+    [ApiExplorerSettings(GroupName = "Notas")]
     public class NotasController : ControllerBase
     {
         private readonly NotaBl _notaBl;
@@ -27,6 +27,8 @@ namespace Utilidades.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [ProducesResponseType<List<NotaDto>>(200)]
+        [Produces("application/json")]
         public async Task<List<NotaDto>> ObtenerAsync() => await _notaBl.ObtenerAsync();
 
         /// <summary>
@@ -35,7 +37,9 @@ namespace Utilidades.Api.Controllers
         /// <param name="nota"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<IActionResult> AgregarAsync(NotaDto nota) => Ok(new { Id = await _notaBl.AgregarAsync(nota) });
+        [ProducesResponseType<IdDto>(201)]
+        [Produces("application/json")]
+        public async Task<IActionResult> AgregarAsync(NotaDto nota) => Created(string.Empty, new { Id = await _notaBl.AgregarAsync(nota) });
 
         /// <summary>
         /// Actualizar nota
@@ -44,11 +48,24 @@ namespace Utilidades.Api.Controllers
         /// <param name="nota"></param>
         /// <returns></returns>
         [HttpPut]
+        [Produces("application/json")]
+        [ProducesResponseType(202)]
         public async Task<IActionResult> ActualizarAsync(string id, NotaDtoIn nota)
         {
             await _notaBl.Actaulizar(id, nota);
 
             return Accepted();
         }        
+    }
+
+    /// <summary>
+    /// Respuesta Id
+    /// </summary>
+    public class IdDto
+    {
+        /// <summary>
+        /// Id string
+        /// </summary>
+        public string Id { get; set; }
     }
 }

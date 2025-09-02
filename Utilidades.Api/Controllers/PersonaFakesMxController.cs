@@ -9,6 +9,7 @@ namespace Utilidades.Api.Controllers
     /// </summary>
     [ApiController]
     [Route("api/[controller]")]
+    [ApiExplorerSettings(GroupName = "v1")]
     public class PersonaFakesMxController : ControllerBase
     {
         //private readonly RepositorioDeNombresYApellidosMx _repositorio;

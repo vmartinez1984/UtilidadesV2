@@ -6,6 +6,7 @@ namespace Utilidades.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [ApiExplorerSettings(GroupName = "v1")]
     public class PersonasFakesController : ControllerBase
     {
         private readonly PersonaFakeServicio _servicioDePersona;

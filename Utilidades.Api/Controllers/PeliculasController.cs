@@ -5,7 +5,7 @@ namespace Utilidades.Api.Controllers
 {
     [Route("api/v2/[controller]")]
     [ApiController]
-    //[EndpointGroupName("YoMerengues")]
+    [ApiExplorerSettings(GroupName = "cruds")]
     public class PeliculasController : ControllerBase
     {
         private readonly PeliculaBl _pelicula;

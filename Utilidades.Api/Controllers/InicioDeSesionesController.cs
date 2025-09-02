@@ -4,8 +4,13 @@ using Utilidades.Api.Dtos;
 
 namespace Utilidades.Api.Controllers
 {
+    /// <summary>
+    /// Inicio de sesión para notas
+    /// </summary>
+    /// <param name="jwtToken"></param>
     [Route("api/[controller]")]
     [ApiController]
+    [ApiExplorerSettings(GroupName = "Notas")]
     public class InicioDeSesionesController(JwtToken jwtToken) : ControllerBase
     {
         private readonly JwtToken _jwtToken = jwtToken;
@@ -16,6 +21,8 @@ namespace Utilidades.Api.Controllers
         /// <param name="inicioDeSesion"></param>
         /// <returns></returns>
         [HttpPost]        
+        [ProducesResponseType<TokenDto>(200)]        
+        [ProducesResponseType<ProblemDetails>(404)]        
         public IActionResult IniciarSesion(InicioDeSesionDto inicioDeSesion)
         {
             if (inicioDeSesion.Usuario == "ahal_tocob@hotmail.com" && inicioDeSesion.Contraseña == "Macross#2012")
@@ -36,7 +43,7 @@ namespace Utilidades.Api.Controllers
                 });
             }
 
-            return NotFound(new { Mensaje = "No ni mergas" });
+            return NotFound(new ProblemDetails { Detail = "No nimergas"});
         }
     }
 }

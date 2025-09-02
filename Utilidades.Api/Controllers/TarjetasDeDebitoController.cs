@@ -4,6 +4,7 @@ namespace Utilidades.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [ApiExplorerSettings(GroupName = "v1")]
     public class TarjetasDeDebitoController : ControllerBase
     {
         /// <summary>

@@ -30,7 +30,7 @@ namespace ProductoBusinessLayer
             return lista;
         }
 
-        public async Task<string> AgregarAsync(ProductoDto notaDto, string carpeta = null) => await _repositorio.AgregarAsync(new ProductoEntity
+        public async Task<string> AgregarAsync(ProductoDtoIn notaDto, string carpeta = null) => await _repositorio.AgregarAsync(new ProductoEntity
         {            
             EncodedKey = notaDto.EncodedKey,            
             Llave = carpeta,
