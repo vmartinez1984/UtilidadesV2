@@ -62,17 +62,31 @@ namespace Utilidades.Api.Controllers
 
     public class SolicitudDeCurp
     {
+        /// <summary>
+        /// Gets or sets the first names of the person.
+        /// </summary>
+        /// <remarks>The value is required and cannot exceed 50 characters in length.</remarks>
         [Required]
         [MaxLength(50)]
         public string Nombres { get; set; }
 
+        /// <summary>
+        /// Gets or sets the first surname of the person.
+        /// </summary>
+        /// <remarks>The value is required and must not exceed 50 characters in length.</remarks>
         [Required]
         [MaxLength(50)]
         public string PrimerApellido { get; set; }
                 
+        /// <summary>
+        /// Gets or sets the second surname of the person.
+        /// </summary>
         [MaxLength(50)]
         public string SegundoApellido { get; set; }
 
+        /// <summary>
+        /// Gets or sets the date of birth.
+        /// </summary>
         [Required]
         public DateTime FechaDeNacimiento { get; set; }
 
@@ -94,8 +108,26 @@ namespace Utilidades.Api.Controllers
 
     }
 
+    /// <summary>
+    /// Provides a validation attribute that ensures a string value corresponds to a valid key in the Estado
+    /// enumeration.
+    /// </summary>
+    /// <remarks>Use this attribute to validate that a property or field contains a valid Estado value. The
+    /// validation is case-insensitive and requires the value to be non-empty. If the value is not a valid Estado key, a
+    /// validation error is returned listing all valid keys.</remarks>
     public class EstadoValidoAttribute : ValidationAttribute
     {
+        /// <summary>
+        /// Validates that the provided value is a non-empty string corresponding to a valid key in the Estado
+        /// enumeration.
+        /// </summary>
+        /// <remarks>The validation is case-insensitive and requires the value to match one of the defined
+        /// Estado enumeration names. If the value is null, empty, or whitespace, validation fails and an error message
+        /// is returned.</remarks>
+        /// <param name="value">The value to validate. Must be a non-empty string representing a key in the Estado enumeration.</param>
+        /// <param name="validationContext">The context information about the validation operation, including the object instance and metadata.</param>
+        /// <returns>A ValidationResult indicating success if the value is a valid Estado key; otherwise, a ValidationResult with
+        /// an error message describing the validation failure.</returns>
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             if (value is string estadoStr && !string.IsNullOrWhiteSpace(estadoStr))

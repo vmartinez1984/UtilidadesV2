@@ -2,6 +2,7 @@
 using ProductoBusinessLayer;
 using ProductoBusinessLayer.Dtos;
 using Utilidades.Api.Dtos;
+using Utilidades.Api.Filters;
 
 namespace Utilidades.Api.Controllers
 {
@@ -42,11 +43,12 @@ namespace Utilidades.Api.Controllers
         [ProducesResponseType(typeof(List<ProductoDto>), 200)]
         [Produces("application/json")]
         [HttpGet]
+        [ApiKey]
         public async Task<IActionResult> Get([FromHeader] string apikey, bool activo= true)
         {            
-            bool existe = await _productoBl.ExisteApikeyAsync(apikey);
-            if (!existe)
-                return Unauthorized();
+            //bool existe = await _productoBl.ExisteApikeyAsync(apikey);
+            //if (!existe)
+            //    return Unauthorized();
 
             var lista = await _productoBl.ObtenerAsync(apikey,activo);
 

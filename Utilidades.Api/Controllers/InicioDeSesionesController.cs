@@ -1,4 +1,4 @@
-﻿using JwtTokenService;
+﻿using JwtToken.Services;
 using Microsoft.AspNetCore.Mvc;
 using Utilidades.Api.Dtos;
 
@@ -11,9 +11,9 @@ namespace Utilidades.Api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "Notas")]
-    public class InicioDeSesionesController(JwtToken jwtToken) : ControllerBase
+    public class InicioDeSesionesController(JwtTokenService jwtToken) : ControllerBase
     {
-        private readonly JwtToken _jwtToken = jwtToken;
+        private readonly JwtTokenService _jwtToken = jwtToken;
 
         /// <summary>
         /// Retorna token

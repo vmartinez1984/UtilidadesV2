@@ -6,6 +6,14 @@ using VMtz84.Pizzas.Services;
 
 namespace Utilidades.Api.Controllers
 {
+    /// <summary>
+    /// Provides API endpoints for retrieving menu categories, pizzas, sizes, dough types, chicken products,
+    /// additionals, beverages, and for managing client information in the pizza ordering application.
+    /// </summary>
+    /// <remarks>This controller exposes RESTful endpoints for accessing menu data and client operations. All
+    /// endpoints return JSON responses and are grouped under the 'v1' API version. Client management endpoints support
+    /// adding new clients and are designed to facilitate integration with authentication mechanisms. Endpoints are
+    /// intended for use in web and mobile applications interacting with the pizza ordering system.</remarks>
     [Route("api/[controller]")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "v1")]
@@ -14,6 +22,11 @@ namespace Utilidades.Api.Controllers
         PizzaService _service;
         private JwtTokenService _jwtTokenService;
 
+        /// <summary>
+        /// Initializes a new instance of the PizzasController class with the specified pizza and JWT token services.
+        /// </summary>
+        /// <param name="pizzaService">The service used to manage pizza-related operations.</param>
+        /// <param name="jwtTokenService">The service used to handle JWT token generation and validation.</param>
         public PizzasController(PizzaService pizzaService, JwtTokenService jwtTokenService)
         {
             _service = pizzaService;
