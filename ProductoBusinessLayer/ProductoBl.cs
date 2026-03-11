@@ -1,23 +1,24 @@
-﻿
-
+﻿using ProductoBusinessLayer.Dtos;
 
 namespace ProductoBusinessLayer
 {
     public class ProductoBl
     {
         private readonly ProductoRepositorio _repositorio;
+        private readonly ApikeyRepositorio _apikeyRepositorio;
 
-        public ProductoBl(ProductoRepositorio notaRepositorio)
+        public ProductoBl(ProductoRepositorio notaRepositorio, ApikeyRepositorio apikeyRepositorio)
         {
             _repositorio = notaRepositorio;
+            _apikeyRepositorio = apikeyRepositorio;
         }
 
-        public async Task<List<ProductoDto>> ObtenerAsync(string llave)
+        public async Task<List<ProductoDto>> ObtenerAsync(string llave, bool estaActivo)
         {
             List<ProductoDto> lista;
 
-            lista = (await _repositorio.ObtenerTodosAsync(llave)).Select(x => new ProductoDto
-            {                
+            lista = (await _repositorio.ObtenerTodosAsync(llave, estaActivo)).Select(x => new ProductoDto
+            {
                 Valor01 = x.Valor01,
                 Valor02 = x.Valor02,
                 Valor03 = x.Valor03,
@@ -31,8 +32,8 @@ namespace ProductoBusinessLayer
         }
 
         public async Task<string> AgregarAsync(ProductoDtoIn notaDto, string carpeta = null) => await _repositorio.AgregarAsync(new ProductoEntity
-        {            
-            EncodedKey = notaDto.EncodedKey,            
+        {
+            EncodedKey = notaDto.EncodedKey,
             Llave = carpeta,
             Valor01 = notaDto.Valor01,
             Valor02 = notaDto.Valor02,
@@ -40,11 +41,11 @@ namespace ProductoBusinessLayer
             Valor04 = notaDto.Valor04
         });
 
-        public async Task ActualizarAsync(string id, ProductoDto nota)
+        public async Task ActualizarAsync(string id, ProductoDtoIn nota)
         {
             ProductoEntity notaEntity;
 
-            notaEntity = await _repositorio.ObtenerPorIdAsync(id);            
+            notaEntity = await _repositorio.ObtenerPorIdAsync(id);
             notaEntity.Valor01 = nota.Valor01;
             notaEntity.Valor02 = nota.Valor02;
             notaEntity.Valor03 = nota.Valor03;
@@ -70,7 +71,7 @@ namespace ProductoBusinessLayer
                 Valor04 = entity.Valor04
             };
         }
-               
+
         public async Task ActivarAsync(string idEncodedKey, bool estaActivo)
         {
             ProductoEntity entity;
@@ -79,5 +80,24 @@ namespace ProductoBusinessLayer
             entity.EstaActivo = estaActivo;
             await _repositorio.ActualizarAsync(entity);
         }
+
+        public async Task AgregarApiKeyAsync(ApikeyDtoIn apikeyDtoIn)
+        {
+            ApikeyEntity entity;
+
+            entity = new ApikeyEntity
+            {
+                Apikey = apikeyDtoIn.Apikey,
+                Correo = apikeyDtoIn.Correo,
+                Nombre = apikeyDtoIn.Nombre,
+                Nota = apikeyDtoIn.Nota,
+                EstaActivo = true,
+                FechaDeRegistro = DateTime.UtcNow
+            };
+            await _apikeyRepositorio.AgregarAsync(entity);
+        }
+
+        public async Task<bool> ExisteApikeyAsync(string idEncodedKey) => await _apikeyRepositorio.ExisteAsync(idEncodedKey);
+        
     }
 }

@@ -1,10 +1,12 @@
 using CodigosPostales.ReglasDeNegocio;
+using Contador.BusinessLayer;
 using JwtTokenService.Helpers;
 using Notas.Helpers;
 using Peliculas.Bl;
 using ProductoBusinessLayer;
 using Utilidades.Api.Extensores;
 using Utilidades.Servicios.Helpers;
+using VMtz84.Pizzas.Extensores;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,8 @@ builder.Services.AgregarPeliculas();
 builder.Services.AgregarNotas();
 builder.Services.AgregarProductos();
 builder.Services.AgregarAutenticacionJwt(builder.Configuration);
+builder.Services.AgregarContadores();
+builder.Services.AgregarPizzasService();
 
 builder.Services.AddControllers();
 
@@ -43,5 +47,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseStaticFiles();
 
 app.Run();

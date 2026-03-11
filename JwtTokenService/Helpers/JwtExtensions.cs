@@ -1,16 +1,17 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using JwtToken.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace JwtTokenService.Helpers
+namespace JwtToken.Services.Helpers
 {
     public static class JwtExtensions
     {        
         public static void AgregarAutenticacionJwt(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<JwtToken>();
+            services.AddScoped<JwtTokenService>();
 
             services.AddAuthentication(opt =>
             {

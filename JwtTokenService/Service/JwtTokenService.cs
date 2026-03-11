@@ -4,13 +4,13 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace JwtTokenService
+namespace JwtToken.Services
 {
-    public class JwtToken
+    public class JwtTokenService
     {
         private readonly string _llaveJwt;
 
-        public JwtToken(IConfiguration configuration)
+        public JwtTokenService(IConfiguration configuration)
         {
 
             _llaveJwt = configuration["LLaveJwt"];

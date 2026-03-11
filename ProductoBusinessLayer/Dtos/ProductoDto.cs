@@ -1,6 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MongoDB.Bson;
+using System.ComponentModel.DataAnnotations;
 
-namespace ProductoBusinessLayer
+namespace ProductoBusinessLayer.Dtos
 {
     public class ProductoDto
     {
@@ -41,4 +42,28 @@ namespace ProductoBusinessLayer
         [MaxLength(512)]
         public string Valor04 { get; set; }
     }
+
+    public class ApikeyDtoIn
+    {
+        [MaxLength(256)]
+        public string Apikey { get; set; } = ObjectId.GenerateNewId().ToString();
+
+        [MaxLength(256)]
+        public string Nombre { get; set; }
+
+        [MaxLength(256)]
+        public string Correo { get; set; }
+
+        [MaxLength(256)]
+        public string Nota { get; set; }
+
+    }
+
+    public class ApikeyDto {
+        public string Apikey { get; set; }
+
+        public DateTime Fecha { get; set; } = DateTime.Now;
+    }
+            
+    
 }

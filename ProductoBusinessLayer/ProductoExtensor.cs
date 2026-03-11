@@ -8,6 +8,7 @@ namespace ProductoBusinessLayer
         {
             services.AddScoped<ProductoBl>();
             services.AddScoped<ProductoRepositorio>();
+            services.AddScoped<ApikeyRepositorio>();
         }
     }
 }

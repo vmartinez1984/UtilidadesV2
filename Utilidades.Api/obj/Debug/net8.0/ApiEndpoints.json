@@ -228,6 +228,54 @@
     ]
   },
   {
+    "ContainingType": "Utilidades.Api.Controllers.ContadoresController",
+    "Method": "Crear",
+    "RelativePath": "api/Contadores",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Contador.BusinessLayer.ContadorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.ContadoresController",
+    "Method": "Get",
+    "RelativePath": "api/Contadores/{key}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "key",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.ContadoresController",
+    "Method": "Next",
+    "RelativePath": "api/Contadores/{key}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "key",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Utilidades.Api.Controllers.CurpController",
     "Method": "GenerarCurp",
     "RelativePath": "api/Curp",
@@ -291,7 +339,26 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Utilidades.Api.Dtos.TokenDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
   },
   {
     "ContainingType": "Utilidades.Api.Controllers.NotasController",
@@ -305,9 +372,7 @@
       {
         "Type": "System.Collections.Generic.List\u00601[[Notas.Dtos.NotaDto, Notas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "application/json"
         ],
         "StatusCode": 200
       }
@@ -327,7 +392,15 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Utilidades.Api.Dtos.IdDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
   },
   {
     "ContainingType": "Utilidades.Api.Controllers.NotasController",
@@ -348,7 +421,13 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 202
+      }
+    ]
   },
   {
     "ContainingType": "Utilidades.Api.Controllers.PersonasFakesController",
@@ -367,41 +446,296 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Utilidades.Api.Controllers.PizzasController",
+    "Method": "GetAdicionales",
+    "RelativePath": "api/Pizzas/Adicionales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[VMtz84.Pizzas.Dtos.ProductoDto, VMtz84.Pizzas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PizzasController",
+    "Method": "GetBebidas",
+    "RelativePath": "api/Pizzas/Bebidas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[VMtz84.Pizzas.Dtos.ProductoDto, VMtz84.Pizzas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PizzasController",
+    "Method": "AgregarClienteAsync",
+    "RelativePath": "api/Pizzas/Clientes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cliente",
+        "Type": "VMtz84.Pizzas.Dtos.ClienteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Utilidades.Api.Dtos.IdDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Utilidades.Api.Dtos.IdDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PizzasController",
+    "Method": "GetMenu",
+    "RelativePath": "api/Pizzas/Menus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[VMtz84.Pizzas.Dtos.MenuDto, VMtz84.Pizzas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PizzasController",
+    "Method": "GetPizzas",
+    "RelativePath": "api/Pizzas/Pizzas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[VMtz84.Pizzas.Dtos.ProductoDto, VMtz84.Pizzas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PizzasController",
+    "Method": "GetMasas",
+    "RelativePath": "api/Pizzas/Pizzas/Masas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[VMtz84.Pizzas.Dtos.MasaDto, VMtz84.Pizzas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PizzasController",
+    "Method": "GetTamanios",
+    "RelativePath": "api/Pizzas/Pizzas/Tamanios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[VMtz84.Pizzas.Dtos.TamanioDto, VMtz84.Pizzas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PizzasController",
+    "Method": "GetPollos",
+    "RelativePath": "api/Pizzas/Pollos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[VMtz84.Pizzas.Dtos.ProductoDto, VMtz84.Pizzas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Utilidades.Api.Controllers.ProductosController",
-    "Method": "GetById",
-    "RelativePath": "api/Productos/{idEncodedKey}",
+    "Method": "Get",
+    "RelativePath": "api/Productos",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "idEncodedKey",
+        "Name": "apikey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ProductoBusinessLayer.Dtos.ProductoDto, ProductoBusinessLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.ProductosController",
+    "Method": "Post",
+    "RelativePath": "api/Productos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "apikey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "producto",
+        "Type": "ProductoBusinessLayer.Dtos.ProductoDtoIn",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Utilidades.Api.Dtos.IdDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.ProductosController",
+    "Method": "GetById",
+    "RelativePath": "api/Productos/{encodedKey}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "apikey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "encodedKey",
         "Type": "System.String",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Utilidades.Api.Dtos.IdDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 201
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
   },
   {
     "ContainingType": "Utilidades.Api.Controllers.ProductosController",
     "Method": "Put",
-    "RelativePath": "api/Productos/{idEncodedKey}",
+    "RelativePath": "api/Productos/{encodedKey}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "idEncodedKey",
+        "Name": "apikey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "encodedKey",
         "Type": "System.String",
         "IsRequired": true
       },
       {
         "Name": "producto",
-        "Type": "ProductoBusinessLayer.ProductoDto",
+        "Type": "ProductoBusinessLayer.Dtos.ProductoDtoIn",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 202
+      }
+    ]
   },
   {
     "ContainingType": "Utilidades.Api.Controllers.ProductosController",
@@ -426,24 +760,43 @@
   },
   {
     "ContainingType": "Utilidades.Api.Controllers.ProductosController",
-    "Method": "Post",
-    "RelativePath": "api/Productos/{Llave}",
+    "Method": "PostApiKey",
+    "RelativePath": "api/Productos/Apikey",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "producto",
-        "Type": "ProductoBusinessLayer.ProductoDto",
-        "IsRequired": true
-      },
-      {
-        "Name": "llave",
-        "Type": "System.String",
+        "Name": "apikeyDtoIn",
+        "Type": "ProductoBusinessLayer.Dtos.ApikeyDtoIn",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.RfcController",
+    "Method": "GenerarRfcConHomoclave",
+    "RelativePath": "api/Rfc",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rfcDto",
+        "Type": "Utilidades.Servicios.Dtos.RfcDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 202
+      }
+    ]
   },
   {
     "ContainingType": "Utilidades.Api.Controllers.TarjetasDeDebitoController",
@@ -596,22 +949,6 @@
       {
         "Name": "vista",
         "Type": "System.Boolean",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Utilidades.Api.Controllers.ProductosController",
-    "Method": "Get",
-    "RelativePath": "Llaves/{llave}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "llave",
-        "Type": "System.String",
         "IsRequired": true
       }
     ],

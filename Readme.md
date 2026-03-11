@@ -19,18 +19,17 @@ direcciones
 
 # Datos técnicos
 
-Se esta usando Mysql para als personas fakes, pero se pretende migrar a MongoDb por las ventajas que ofrece.
+Se esta usando MongoDb por las ventajas que ofrece.
 
 ## Todo
 - [ ] Agregar el endpoint para mx y es
 - [ ] Diagramas
 - [ ] Hacer uno solo para clabes y tarjetas bacnarias.
 - [ ] Unir Nota y sesion
-- [ ] Mejorar productos
 - [ ] Agregar
 - [ ] Presentacion grpc
 - [ ] Presentacion soap
 - [ ] Agregar los respaldo de las bases
 - [ ] Agregar los archivo de docker y compose
 - [ ] Agregar webhook
-- [ ] Agregar un servicio delogs simple
+- [ ] Agregar un servicio de logs simple

@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace ProductoBusinessLayer
@@ -18,32 +17,17 @@ namespace ProductoBusinessLayer
             _collection = _mongoDatabase.GetCollection<ProductoEntity>("Productos");
         }
 
-        public async Task<List<ProductoEntity>> ObtenerTodosAsync(string llave)
+        public async Task<List<ProductoEntity>> ObtenerTodosAsync(string llave, bool estaActivo)
         {
             List<ProductoEntity> notas;
 
-            notas = (await _collection.FindAsync(x => x.Llave == llave)).ToList();
+            notas = (await _collection.FindAsync(x => x.Llave == llave && x.EstaActivo == estaActivo)).ToList();
 
             return notas;
         }
 
-        private async Task<int> ObtenerId()
-        {
-            var item = await
-            _collection
-            .Find(new BsonDocument()) // Puedes agregar filtros si es necesario
-            .SortByDescending(r => r.Id) // Ordenar por fecha de forma descendente
-            .FirstOrDefaultAsync();
-            ;
-            if (item == null)
-                return 1;
-
-            return item.Id + 1;
-        }
-
         public async Task<string> AgregarAsync(ProductoEntity item)
         {
-            item.Id = await ObtenerId();
             await _collection.InsertOneAsync(item);
 
             return item._id.ToString();
@@ -51,15 +35,10 @@ namespace ProductoBusinessLayer
 
         public async Task<ProductoEntity> ObtenerPorIdAsync(string idEncodedKJey)
         {
-            if (int.TryParse(idEncodedKJey, out int id))
-                return (await _collection.FindAsync(x => x.Id == id)).FirstOrDefault();
-            else
-            {
-                var entity = await _collection.Find(x => x.EncodedKey == idEncodedKJey).FirstOrDefaultAsync();
-                if (entity is not null)
-                    return entity;
-                return await _collection.Find(x => x._id == idEncodedKJey).FirstOrDefaultAsync();
-            }
+            var entity = await _collection.Find(x => x.EncodedKey == idEncodedKJey).FirstOrDefaultAsync();
+            if (entity is not null)
+                return entity;
+            return await _collection.Find(x => x._id == idEncodedKJey).FirstOrDefaultAsync();
         }
 
         public async Task ActualizarAsync(ProductoEntity entity)

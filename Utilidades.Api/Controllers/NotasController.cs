@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Notas.BussinesLayer;
 using Notas.Dtos;
+using Utilidades.Api.Dtos;
 
 namespace Utilidades.Api.Controllers
 {
@@ -56,16 +57,5 @@ namespace Utilidades.Api.Controllers
 
             return Accepted();
         }        
-    }
-
-    /// <summary>
-    /// Respuesta Id
-    /// </summary>
-    public class IdDto
-    {
-        /// <summary>
-        /// Id string
-        /// </summary>
-        public string Id { get; set; }
-    }
+    }   
 }

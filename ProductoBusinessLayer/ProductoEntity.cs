@@ -10,9 +10,6 @@ namespace ProductoBusinessLayer
         [BsonRepresentation(BsonType.ObjectId)]
         public string _id { get; set; }
 
-        [BsonElement("id")] 
-        public int Id { get; set; }
-
         public string EncodedKey { get; set; } = Guid.NewGuid().ToString();
 
         [Required]

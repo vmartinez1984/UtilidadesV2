@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodigosPostales.Repositorios")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5eedc8bb469d5a103d65c1f14b804cac632bdb96")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45519761c79fe07a553d2a2f8347b77b2a09ff1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodigosPostales.Repositorios")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodigosPostales.Repositorios")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

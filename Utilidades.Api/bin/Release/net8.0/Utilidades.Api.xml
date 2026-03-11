@@ -86,6 +86,11 @@
             <param name="formFile"></param>
             <returns></returns>
         </member>
+        <member name="T:Utilidades.Api.Controllers.CurpController">
+            <summary>
+            controller para el curp
+            </summary>
+        </member>
         <member name="M:Utilidades.Api.Controllers.CurpController.GenerarCurp(Utilidades.Api.Controllers.SolicitudDeCurp)">
             <summary>
             Genera el curp
@@ -118,6 +123,18 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Utilidades.Api.Controllers.InicioDeSesionesController">
+            <summary>
+            Inicio de sesión para notas
+            </summary>
+            <param name="jwtToken"></param>
+        </member>
+        <member name="M:Utilidades.Api.Controllers.InicioDeSesionesController.#ctor(JwtTokenService.JwtToken)">
+            <summary>
+            Inicio de sesión para notas
+            </summary>
+            <param name="jwtToken"></param>
+        </member>
         <member name="M:Utilidades.Api.Controllers.InicioDeSesionesController.IniciarSesion(Utilidades.Api.Dtos.InicioDeSesionDto)">
             <summary>
             Retorna token
@@ -128,8 +145,7 @@
         <member name="T:Utilidades.Api.Controllers.NotasController">
             <summary>
             Crud de notas
-            </summary>
-            <param name="notaBl"></param>
+            </summary>    
         </member>
         <member name="M:Utilidades.Api.Controllers.NotasController.ObtenerAsync">
             <summary>
@@ -163,11 +179,129 @@
             Registro de nombres y apellidos para generar una persona Fake de México
             </summary>
         </member>
+        <member name="M:Utilidades.Api.Controllers.PizzasController.GetMenu">
+            <summary>
+            Retrieves the list of available menu categories for the application.
+            </summary>
+            <returns></returns>
+            <response code="200"></response>        
+        </member>
+        <member name="M:Utilidades.Api.Controllers.PizzasController.GetPizzas">
+            <summary>
+            Retrieves the list of available pizzas for the application.
+            </summary>
+            <returns></returns>
+            <response code="200"></response>        
+        </member>
+        <member name="M:Utilidades.Api.Controllers.PizzasController.GetTamanios">
+            <summary>
+            Retrieves the list of available sizes for the application.
+            </summary>
+            <returns></returns>
+            <response code="200"></response>        
+        </member>
+        <member name="M:Utilidades.Api.Controllers.PizzasController.GetMasas">
+            <summary>
+            Retrieves the list of available mass for the application.
+            </summary>
+            <returns></returns>
+            <response code="200"></response>        
+        </member>
+        <member name="M:Utilidades.Api.Controllers.PizzasController.GetPollos">
+            <summary>
+            Retrieves the list of available chickens for the application.
+            </summary>
+            <returns></returns>
+            <response code="200"></response>        
+        </member>
+        <member name="M:Utilidades.Api.Controllers.PizzasController.GetAdicionales">
+            <summary>
+            Retrieves the list of available additionals for the application.
+            </summary>
+            <returns></returns>
+            <response code="200"></response>        
+        </member>
+        <member name="M:Utilidades.Api.Controllers.PizzasController.GetBebidas">
+            <summary>
+            Retrieves the list of available beberages for the application.
+            </summary>
+            <returns></returns>
+            <response code="200"></response>        
+        </member>
+        <member name="M:Utilidades.Api.Controllers.ProductosController.PostApiKey(ProductoBusinessLayer.Dtos.ApikeyDtoIn)">
+            <summary>
+            Registro con apikey, se registra la apikey para su uso posterior en los endpoints de productos
+            </summary>
+            <returns></returns>        
+        </member>
+        <member name="M:Utilidades.Api.Controllers.ProductosController.Get(System.String,System.Boolean)">
+            <summary>
+            Lista de productos por apikey, se obtiene la lista de productos registrados con la apikey proporcionada en el header de la petición
+            </summary>
+            <returns></returns>
+            <response code="200"></response>                
+        </member>
+        <member name="M:Utilidades.Api.Controllers.ProductosController.Post(System.String,ProductoBusinessLayer.Dtos.ProductoDtoIn)">
+            <summary>
+            Registro con apikey, se registra la apikey para su uso posterior en los endpoints de productos
+            </summary>
+            <returns></returns>
+            <response code="201"></response>     
+            <response code="401">No autorizado</response>
+        </member>
+        <member name="M:Utilidades.Api.Controllers.ProductosController.GetById(System.String,System.String)">
+            <summary>
+            Regresa el registro por el encodedKey
+            </summary>
+            <returns></returns>
+            <response code="200"></response>     
+            <response code="401">No autorizado</response>
+            <response code="404"></response>     
+        </member>
+        <member name="M:Utilidades.Api.Controllers.ProductosController.Put(System.String,System.String,ProductoBusinessLayer.Dtos.ProductoDtoIn)">
+            <summary>
+            Actualizar producto
+            </summary>
+            <returns></returns>
+            <response code="202"></response>     
+            <response code="401">No autorizado</response>
+        </member>
+        <member name="T:Utilidades.Api.Controllers.RfcController">
+            <summary>
+            Controller del rfc
+            </summary>
+        </member>
+        <member name="M:Utilidades.Api.Controllers.RfcController.GenerarRfcConHomoclave(Utilidades.Servicios.Dtos.RfcDto)">
+            <summary>
+            Genera el rfc con homoclave, deacuedo con el algoritmo del SAT.
+            Fisica = 0, Moral = 1
+            </summary>
+            <param name="rfcDto"></param>
+            <returns></returns>
+            <response code="202">Create</response>
+        </member>
         <member name="M:Utilidades.Api.Controllers.TarjetasDeDebitoController.Get">
             <summary>
             Genera un número de tarjeta de débito válido según el algoritmo de Luhn y las convenciones de numeración de tarjetas.o
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:Utilidades.Api.Extensores.SwaggerExtensor">
+            <summary>
+            Configuraçión de swagger
+            </summary>
+        </member>
+        <member name="M:Utilidades.Api.Extensores.SwaggerExtensor.AgregarConfiguracionDeSawgger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configuración de swagger documents
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Utilidades.Api.Extensores.SwaggerExtensor.UsarSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Use swagger local, se agregan los elementos de combobox
+            </summary>
+            <param name="app"></param>
         </member>
     </members>
 </doc>
