@@ -59,7 +59,8 @@ namespace ProductoBusinessLayer
             ProductoEntity entity;
 
             entity = await _repositorio.ObtenerPorIdAsync(idEncodedKey);
-
+            if (entity == null) 
+                return null;
             return new ProductoDto
             {
                 EncodedKey = entity.EncodedKey,

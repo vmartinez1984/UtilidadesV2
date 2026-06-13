@@ -514,6 +514,58 @@
   },
   {
     "ContainingType": "Utilidades.Api.Controllers.PizzasController",
+    "Method": "ObtenerTokenAsync",
+    "RelativePath": "api/Pizzas/Clientes/InicioDeSesiones",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PizzasController",
+    "Method": "AgregarOrdenAsync",
+    "RelativePath": "api/Pizzas/Clientes/Ordenes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ordenDto",
+        "Type": "VMtz84.Pizzas.Dtos.OrdenDtoIn",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Utilidades.Api.Dtos.IdDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PizzasController",
+    "Method": "ObtenerOrdenAsync",
+    "RelativePath": "api/Pizzas/Clientes/Ordenes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "VMtz84.Pizzas.Dtos.OrdenDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.PizzasController",
     "Method": "GetMenu",
     "RelativePath": "api/Pizzas/Menus",
     "HttpMethod": "GET",
@@ -799,6 +851,37 @@
     ]
   },
   {
+    "ContainingType": "Utilidades.Api.Controllers.ServiciosController",
+    "Method": "Qr",
+    "RelativePath": "api/Servicios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mensaje",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ancho",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "largo",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "margen",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Utilidades.Api.Controllers.TarjetasDeDebitoController",
     "Method": "Get",
     "RelativePath": "api/TarjetasDeDebito",
@@ -949,6 +1032,42 @@
       {
         "Name": "vista",
         "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.WebHooksController",
+    "Method": "Get",
+    "RelativePath": "api/WebHooks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[VMtz84.WebHook.WebHook, VMtz84.WebHook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Utilidades.Api.Controllers.WebHooksController",
+    "Method": "Post",
+    "RelativePath": "api/WebHooks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objeto",
+        "Type": "System.Object",
         "IsRequired": true
       }
     ],

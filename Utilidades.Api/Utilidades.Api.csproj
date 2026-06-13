@@ -23,12 +23,14 @@
 	<ItemGroup>
 		<ProjectReference Include="..\CodigosPostales.ReglasDeNegocio\CodigosPostales.ReglasDeNegocio.csproj" />
 		<ProjectReference Include="..\Contador.BusinessLayer\Contador.BusinessLayer.csproj" />
+		<ProjectReference Include="..\ImplementacionQr\ImplementacionQr.csproj" />
 		<ProjectReference Include="..\JwtTokenService\JwtTokenService.csproj" />
 		<ProjectReference Include="..\Notas\Notas.csproj" />
 		<ProjectReference Include="..\Peliculas.Bl\Peliculas.Bl.csproj" />
 		<ProjectReference Include="..\Pizzas.BusinessLayer\VMtz84.Pizzas.csproj" />
 		<ProjectReference Include="..\ProductoBusinessLayer\ProductoBusinessLayer.csproj" />
 		<ProjectReference Include="..\Utilidades.Servicios\Utilidades.Servicios.csproj" />
+		<ProjectReference Include="..\VMtz84.WebHook\VMtz84.WebHook.csproj" />
 	</ItemGroup>
 
 </Project>

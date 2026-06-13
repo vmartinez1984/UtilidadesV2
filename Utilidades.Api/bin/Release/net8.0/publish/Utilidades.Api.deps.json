@@ -9,13 +9,17 @@
       "Utilidades.Api/3.0.0": {
         "dependencies": {
           "CodigosPostales.ReglasDeNegocio": "1.0.0",
+          "Contador.BusinessLayer": "1.0.0",
+          "ImplementacionQr": "1.0.0",
           "JwtTokenService": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.22",
           "Notas": "1.0.0",
           "Peliculas.Bl": "1.0.0",
           "ProductoBusinessLayer": "1.0.0",
           "Swashbuckle.AspNetCore": "8.1.1",
-          "Utilidades.Servicios": "1.0.0"
+          "Utilidades.Servicios": "1.0.0",
+          "VMtz84.Pizzas": "1.0.0",
+          "VMtz84.WebHook": "1.0.0"
         },
         "runtime": {
           "Utilidades.Api.dll": {}
@@ -182,6 +186,22 @@
           }
         }
       },
+      "Microsoft.Win32.SystemEvents/9.0.10": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.1025.47515"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.1025.47515"
+          }
+        }
+      },
       "MongoDB.Bson/3.3.0": {
         "runtime": {
           "lib/net6.0/MongoDB.Bson.dll": {
@@ -263,6 +283,21 @@
           "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
             "assemblyVersion": "8.1.1.0",
             "fileVersion": "8.1.1.1274"
+          }
+        }
+      },
+      "System.Drawing.Common/9.0.10": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "9.0.10"
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.1025.47506"
+          },
+          "lib/net8.0/System.Private.Windows.Core.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.1025.47506"
           }
         }
       },
@@ -378,6 +413,26 @@
           }
         }
       },
+      "ZXing.Net/0.16.11": {
+        "runtime": {
+          "lib/net8.0/zxing.dll": {
+            "assemblyVersion": "0.16.11.0",
+            "fileVersion": "0.16.11.0"
+          }
+        }
+      },
+      "ZXing.Net.Bindings.Windows.Compatibility/0.16.14": {
+        "dependencies": {
+          "System.Drawing.Common": "9.0.10",
+          "ZXing.Net": "0.16.11"
+        },
+        "runtime": {
+          "lib/net8.0/ZXing.Windows.Compatibility.dll": {
+            "assemblyVersion": "0.16.14.0",
+            "fileVersion": "0.16.14.0"
+          }
+        }
+      },
       "CodigosPostales.ReglasDeNegocio/1.0.0": {
         "dependencies": {
           "CodigosPostales.Repositorios": "1.0.0",
@@ -399,6 +454,32 @@
         },
         "runtime": {
           "CodigosPostales.Repositorios.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Contador.BusinessLayer/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.4",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.4",
+          "MongoDB.Bson": "3.3.0",
+          "MongoDB.Driver": "3.3.0"
+        },
+        "runtime": {
+          "Contador.BusinessLayer.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ImplementacionQr/1.0.0": {
+        "dependencies": {
+          "ZXing.Net": "0.16.11",
+          "ZXing.Net.Bindings.Windows.Compatibility": "0.16.14"
+        },
+        "runtime": {
+          "ImplementacionQr.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -480,6 +561,32 @@
         },
         "runtime": {
           "Utilidades.Servicios.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "VMtz84.Pizzas/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.4",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.4",
+          "MongoDB.Driver": "3.3.0"
+        },
+        "runtime": {
+          "VMtz84.Pizzas.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "VMtz84.WebHook/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.4",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.4",
+          "MongoDB.Driver": "3.3.0"
+        },
+        "runtime": {
+          "VMtz84.WebHook.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -605,6 +712,13 @@
       "path": "microsoft.openapi/1.6.23",
       "hashPath": "microsoft.openapi.1.6.23.nupkg.sha512"
     },
+    "Microsoft.Win32.SystemEvents/9.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P1CEtsxar/RhfoH3r1vc9ra28LLVYphpcFBxyRIEMM/jP3qh4j9TU4sWH2RUhMZX+GbFxZ+zz1oSP2n9MwjshA==",
+      "path": "microsoft.win32.systemevents/9.0.10",
+      "hashPath": "microsoft.win32.systemevents.9.0.10.nupkg.sha512"
+    },
     "MongoDB.Bson/3.3.0": {
       "type": "package",
       "serviceable": true,
@@ -668,6 +782,13 @@
       "path": "swashbuckle.aspnetcore.swaggerui/8.1.1",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.8.1.1.nupkg.sha512"
     },
+    "System.Drawing.Common/9.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FDakPhIcxHnhslLiz4ZQ+ALpHRpCU3zOep9Mcq+4hL23XwQrzmgJNYvf1tH4kJ/V36wO/ZhRr8nOfiz26P3wKg==",
+      "path": "system.drawing.common/9.0.10",
+      "hashPath": "system.drawing.common.9.0.10.nupkg.sha512"
+    },
     "System.IdentityModel.Tokens.Jwt/6.35.0": {
       "type": "package",
       "serviceable": true,
@@ -703,12 +824,36 @@
       "path": "zstdsharp.port/0.7.3",
       "hashPath": "zstdsharp.port.0.7.3.nupkg.sha512"
     },
+    "ZXing.Net/0.16.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OZfAVu88hl87BffQ+rlWCj/vLvAhhCK4QnFaoveeF/MY8SjHNSYBQ3qyUEWlPKNgBQGh1syXhCDg10vUnCsqkg==",
+      "path": "zxing.net/0.16.11",
+      "hashPath": "zxing.net.0.16.11.nupkg.sha512"
+    },
+    "ZXing.Net.Bindings.Windows.Compatibility/0.16.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bJw1qjpNJ8JmDP55UBAvA5bCU+vSEGua4z43nukJqMlrpkKu6mTw6NZGJZntM8KbNQ3RNLu8DJMJBSWUd0ifYg==",
+      "path": "zxing.net.bindings.windows.compatibility/0.16.14",
+      "hashPath": "zxing.net.bindings.windows.compatibility.0.16.14.nupkg.sha512"
+    },
     "CodigosPostales.ReglasDeNegocio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "CodigosPostales.Repositorios/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Contador.BusinessLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ImplementacionQr/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -739,6 +884,16 @@
       "sha512": ""
     },
     "Utilidades.Servicios/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VMtz84.Pizzas/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VMtz84.WebHook/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

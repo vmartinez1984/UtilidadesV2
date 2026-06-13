@@ -8,6 +8,8 @@ namespace VMtz84.Pizzas.Extensores
         public static void AgregarPizzasService(this IServiceCollection services)
         {
             services.AddScoped<PizzaService>();
+            services.AddScoped<OrdenService>();
+            services.AddScoped<MenuService>();
             services.AddScoped<ClienteService>();
         }
     }

@@ -7,6 +7,7 @@ using Utilidades.Api.Extensores;
 using Utilidades.Servicios.Helpers;
 using VMtz84.Pizzas.Extensores;
 using JwtToken.Services.Helpers;
+using VMtz84.WebHook;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,9 +17,10 @@ builder.Services.AgregarCodigosPostales();
 builder.Services.AgregarPeliculas();
 builder.Services.AgregarNotas();
 builder.Services.AgregarProductos();
-builder.Services.AgregarAutenticacionJwt(builder.Configuration);
 builder.Services.AgregarContadores();
 builder.Services.AgregarPizzasService();
+builder.Services.AgregarAutenticacionJwt(builder.Configuration);
+builder.Services.AgregarWebHookService();
 
 builder.Services.AddControllers();
 
@@ -28,6 +30,10 @@ builder.Services.AgregarConfiguracionDeSawgger();
 
 builder.Services.AddAuthorization(options =>
 {
+    options.AddPolicy("Cliente", policy =>
+    {        
+        policy.RequireClaim("Role", "Cliente");
+    });
     options.AddPolicy("Yo merengues", policy =>
     {
         policy.RequireClaim("Role", "Yo merengues");
@@ -44,6 +50,7 @@ app.UseCors("AllowWebApp");
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

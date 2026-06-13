@@ -16,7 +16,7 @@ namespace VMtz84.Pizzas.Services
             var mongoClient = new MongoClient(stringConnection);
             string databaseName = stringConnection.Split("/").Last().Split("?").First();
             _mongoDatabase = mongoClient.GetDatabase(databaseName);
-            _collection = _mongoDatabase.GetCollection<UsuarioEntity>("Usuarios");
+            _collection = _mongoDatabase.GetCollection<UsuarioEntity>("Clientes");
         }
 
         public async Task<string> AgregarAsync(ClienteDto usuario)
@@ -26,7 +26,7 @@ namespace VMtz84.Pizzas.Services
             entity = new UsuarioEntity
             {
                 Id = await ObtenerIdAsync(),
-                Encodedkey = Guid.NewGuid().ToString(), // Genera una clave única
+                Encodedkey = usuario.Encodedkey,
                 Nombre = usuario.Nombre,
                 Apellidos = usuario.Apellidos,
                 Correo = usuario.Correo,
@@ -50,7 +50,8 @@ namespace VMtz84.Pizzas.Services
             UsuarioEntity entity;
 
             entity = await _collection.Find(e => e.Correo == correo).FirstOrDefaultAsync();
-
+            if (entity is null)
+                return null;
             return new ClienteDto
             {
                 Apellidos = entity.Apellidos,

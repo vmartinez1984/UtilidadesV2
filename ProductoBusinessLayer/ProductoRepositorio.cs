@@ -38,7 +38,10 @@ namespace ProductoBusinessLayer
             var entity = await _collection.Find(x => x.EncodedKey == idEncodedKJey).FirstOrDefaultAsync();
             if (entity is not null)
                 return entity;
-            return await _collection.Find(x => x._id == idEncodedKJey).FirstOrDefaultAsync();
+            if (idEncodedKJey.Length == 24)
+                return await _collection.Find(x => x._id == idEncodedKJey).FirstOrDefaultAsync();
+
+            return null;
         }
 
         public async Task ActualizarAsync(ProductoEntity entity)

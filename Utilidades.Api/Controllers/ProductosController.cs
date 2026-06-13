@@ -71,7 +71,9 @@ namespace Utilidades.Api.Controllers
             bool existe = await _productoBl.ExisteApikeyAsync(apikey);
             if (!existe)
                 return Unauthorized();
-
+            var existentes = await _productoBl.ObtenerPorIdAsync(producto.EncodedKey);
+            if (existentes is not null)
+                return Conflict(new IdDto { Mensaje = "Producto previamente registrado" });
             var data = await _productoBl.AgregarAsync(producto, apikey);
 
             return Created("", new { FechaDeRegistro = DateTime.Now, EncodedKey = producto.EncodedKey });

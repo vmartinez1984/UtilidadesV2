@@ -195,3 +195,15 @@ C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\obj\Release\net8.0\swae.build.ex.cache
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\Contador.BusinessLayer.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\Contador.BusinessLayer.pdb
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\VMtz84.Pizzas.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\VMtz84.Pizzas.pdb
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\VMtz84.WebHook.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\VMtz84.WebHook.pdb
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\System.Drawing.Common.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\System.Private.Windows.Core.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\zxing.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\ZXing.Windows.Compatibility.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\ImplementacionQr.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\ImplementacionQr.pdb

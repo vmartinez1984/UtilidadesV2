@@ -6,11 +6,24 @@ namespace VMtz84.Pizzas.Services
     {
         public ClienteService Cliente { get; set; }
 
-        public PizzaService(ClienteService clienteService)
+        public OrdenService Orden { get; set; }
+
+        public MenuService Menu { get; set; }
+        public PizzaService(
+            ClienteService clienteService, 
+            OrdenService orden, 
+            MenuService menuService
+        )
         {
             Cliente = clienteService;
+            Orden = orden;
+            Menu = menuService;
         }
 
+    }
+
+    public class MenuService
+    {
         public List<MenuDto> ObtenerMenus()
         {
             var menus = new List<MenuDto>
@@ -356,6 +369,21 @@ namespace VMtz84.Pizzas.Services
                   },
             };
             return productos;
+        }
+
+        public ProductoDto ObtenerPizza(int pizzaId)
+        {
+            List<ProductoDto> pizzas = ObtenerPizzas();
+
+            return pizzas.FirstOrDefault(p => p.Id == pizzaId);
+        }
+
+        internal MasaDto ObtenerMasa(int masaId)
+        {
+
+            List<MasaDto> masas = ObtenerMasas();
+
+            return masas.FirstOrDefault(m => m.Id == masaId);
         }
     }
 }

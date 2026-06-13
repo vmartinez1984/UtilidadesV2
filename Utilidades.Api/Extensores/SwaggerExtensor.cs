@@ -1,6 +1,5 @@
 ﻿using Microsoft.OpenApi.Models;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using Utilidades.Api.Filters;
 
 namespace Utilidades.Api.Extensores
@@ -16,6 +15,8 @@ namespace Utilidades.Api.Extensores
         /// <param name="services"></param>
         public static void AgregarConfiguracionDeSawgger(this IServiceCollection services)
         {
+            //services.AddAuthentication("Basic").AddScheme<Microsoft.AspNetCore.Authentication.AuthenticationSchemeOptions, BasicAuthenticationHandler>("Basic", null);
+
             services.AddSwaggerGen(gen =>
             {
                 gen.SwaggerDoc("v1", new OpenApiInfo
@@ -39,7 +40,14 @@ namespace Utilidades.Api.Extensores
                     Description = "Claves, referencias, etc"
                 });
 
-                gen.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                gen.SwaggerDoc("Pizzas", new OpenApiInfo
+                {
+                    Title = "Pizzas",
+                    Version = "1",
+                    Description = "WS para priacticar con "
+                });
+
+                gen.AddSecurityDefinition("bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
                     Type = SecuritySchemeType.Http,
@@ -49,7 +57,29 @@ namespace Utilidades.Api.Extensores
                     Description = "Introduce sólo el token. El prefijo 'Bearer' se agrega automáticamente."
                 });
 
-                gen.OperationFilter<AuthRequirementOperationFilter>();
+                gen.AddSecurityDefinition("basic", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "basic",
+                    In = ParameterLocation.Header,
+                    Description = "Use Basic authentication: Authorization: Basic {base64(correo:contraseña)}"
+                });
+
+                //gen.AddSecurityRequirement(new OpenApiSecurityRequirement
+                //{
+                //    {
+                //        new OpenApiSecurityScheme
+                //        {
+                //            Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "basic", ExternalResource= "/swagger/Pizzas/swagger.json" }
+                //        },
+                //        new string[] { }
+                //    }
+                //});
+
+                gen.OperationFilter<MultiAuthOperationFilter>();
+
+                //gen.OperationFilter<AuthRequirementOperationFilter>();
 
                 var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 gen.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
@@ -68,6 +98,7 @@ namespace Utilidades.Api.Extensores
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
                 c.SwaggerEndpoint("/swagger/Notas/swagger.json", "Notas");
                 c.SwaggerEndpoint("/swagger/cruds/swagger.json", "CRUDS");
+                c.SwaggerEndpoint("/swagger/Pizzas/swagger.json", "Pizzas");
 
                 c.RoutePrefix = string.Empty;
             });

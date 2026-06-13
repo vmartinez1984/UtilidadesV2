@@ -10,7 +10,7 @@ namespace Utilidades.Api.Filters
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            var configuration = context.HttpContext.RequestServices.GetService<IConfiguration>();
+            //var configuration = context.HttpContext.RequestServices.GetService<IConfiguration>();
 
             if (!context.HttpContext.Request.Headers.TryGetValue(HEADER_NAME, out var apiKey))
             {

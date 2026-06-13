@@ -12,7 +12,6 @@ namespace JwtToken.Services
 
         public JwtTokenService(IConfiguration configuration)
         {
-
             _llaveJwt = configuration["LLaveJwt"];
         }
 
@@ -23,13 +22,13 @@ namespace JwtToken.Services
             //var expirationTimeStamp = DateTime.Now.AddMinutes(20);
 
             var claims = new List<Claim>
-        {
-            new Claim("Nombre", nombre),
-            new Claim("Role", role),
-            new Claim("ClienteId",clienteId),
-            new Claim("email", correo)
-            //new Claim("scope", string.Join(" ", user.Scopes))
-        };
+            {
+                new Claim("Nombre", nombre),
+                new Claim(ClaimTypes.Role, role),
+                new Claim("ClienteId",clienteId),
+                new Claim("email", correo)
+                //new Claim("scope", string.Join(" ", user.Scopes))
+            };
 
             var tokenOptions = new JwtSecurityToken(
                 //issuer: "https://localhost:5002",            

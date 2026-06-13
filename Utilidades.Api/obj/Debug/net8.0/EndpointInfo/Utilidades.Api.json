@@ -513,216 +513,6 @@
         }
       }
     },
-    "/api/Pizzas/Menus": {
-      "get": {
-        "tags": [
-          "Pizzas"
-        ],
-        "summary": "Retrieves the list of available menu categories for the application.",
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MenuDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Pizzas/Pizzas": {
-      "get": {
-        "tags": [
-          "Pizzas"
-        ],
-        "summary": "Retrieves the list of available pizzas for the application.",
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ProductoDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Pizzas/Pizzas/Tamanios": {
-      "get": {
-        "tags": [
-          "Pizzas"
-        ],
-        "summary": "Retrieves the list of available sizes for the application.",
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TamanioDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Pizzas/Pizzas/Masas": {
-      "get": {
-        "tags": [
-          "Pizzas"
-        ],
-        "summary": "Retrieves the list of available mass for the application.",
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MasaDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Pizzas/Pollos": {
-      "get": {
-        "tags": [
-          "Pizzas"
-        ],
-        "summary": "Retrieves the list of available chickens for the application.",
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ProductoDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Pizzas/Adicionales": {
-      "get": {
-        "tags": [
-          "Pizzas"
-        ],
-        "summary": "Retrieves the list of available additionals for the application.",
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ProductoDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Pizzas/Bebidas": {
-      "get": {
-        "tags": [
-          "Pizzas"
-        ],
-        "summary": "Retrieves the list of available beberages for the application.",
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ProductoDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Pizzas/Clientes": {
-      "post": {
-        "tags": [
-          "Pizzas"
-        ],
-        "summary": "Add Client",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClienteDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClienteDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClienteDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Client already added",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/IdDto"
-                }
-              }
-            }
-          },
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/IdDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/Rfc": {
       "post": {
         "tags": [
@@ -763,12 +553,121 @@
         }
       }
     },
+    "/api/Servicios": {
+      "get": {
+        "tags": [
+          "Servicios"
+        ],
+        "parameters": [
+          {
+            "name": "mensaje",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ancho",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 400
+            }
+          },
+          {
+            "name": "largo",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 400
+            }
+          },
+          {
+            "name": "margen",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/TarjetasDeDebito": {
       "get": {
         "tags": [
           "TarjetasDeDebito"
         ],
         "summary": "Genera un número de tarjeta de débito válido según el algoritmo de Luhn y las convenciones de numeración de tarjetas.o",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/WebHooks": {
+      "get": {
+        "tags": [
+          "WebHooks"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WebHook"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WebHook"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WebHook"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WebHooks"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { }
+            },
+            "text/json": {
+              "schema": { }
+            },
+            "application/*+json": {
+              "schema": { }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -789,43 +688,6 @@
           "nombre": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ClienteDto": {
-        "required": [
-          "apellidos",
-          "contrasenia",
-          "correo",
-          "nombre"
-        ],
-        "type": "object",
-        "properties": {
-          "encodedkey": {
-            "type": "string",
-            "nullable": true
-          },
-          "nombre": {
-            "maxLength": 64,
-            "minLength": 1,
-            "type": "string"
-          },
-          "apellidos": {
-            "maxLength": 64,
-            "minLength": 1,
-            "type": "string"
-          },
-          "correo": {
-            "maxLength": 64,
-            "minLength": 1,
-            "type": "string",
-            "format": "email"
-          },
-          "contrasenia": {
-            "maxLength": 12,
-            "minLength": 1,
-            "type": "string"
           }
         },
         "additionalProperties": false
@@ -915,100 +777,6 @@
         },
         "additionalProperties": false
       },
-      "IdDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "nullable": true
-          },
-          "mensaje": {
-            "type": "string",
-            "nullable": true
-          },
-          "fecha": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "additionalProperties": false
-      },
-      "MasaDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "descripcion": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "MenuDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "titulo": {
-            "type": "string",
-            "nullable": true
-          },
-          "subtitulo": {
-            "type": "string",
-            "nullable": true
-          },
-          "ruta": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ProductoDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "descripcion": {
-            "type": "string",
-            "nullable": true
-          },
-          "ingredientes": {
-            "type": "string",
-            "nullable": true
-          },
-          "ruta": {
-            "type": "string",
-            "nullable": true
-          },
-          "menu": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "precio": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
       "RfcDto": {
         "required": [
           "fechaDeNacimiento",
@@ -1054,20 +822,24 @@
           "nombres": {
             "maxLength": 50,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "Gets or sets the first names of the person."
           },
           "primerApellido": {
             "maxLength": 50,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "Gets or sets the first surname of the person."
           },
           "segundoApellido": {
             "maxLength": 50,
             "type": "string",
+            "description": "Gets or sets the second surname of the person.",
             "nullable": true
           },
           "fechaDeNacimiento": {
             "type": "string",
+            "description": "Gets or sets the date of birth.",
             "format": "date-time"
           },
           "sexo": {
@@ -1085,24 +857,6 @@
         },
         "additionalProperties": false
       },
-      "TamanioDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "descripcion": {
-            "type": "string",
-            "nullable": true
-          },
-          "precio": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
       "TipoPersona": {
         "enum": [
           0,
@@ -1110,14 +864,41 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "WebHook": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "body": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaDeRegistro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "encodedkey": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
-      "Bearer": {
+      "bearer": {
         "type": "http",
         "description": "Introduce sólo el token. El prefijo 'Bearer' se agrega automáticamente.",
         "scheme": "bearer",
         "bearerFormat": "JWT"
+      },
+      "basic": {
+        "type": "http",
+        "description": "Use Basic authentication: Authorization: Basic {base64(correo:contraseña)}",
+        "scheme": "basic"
       }
     }
   }
