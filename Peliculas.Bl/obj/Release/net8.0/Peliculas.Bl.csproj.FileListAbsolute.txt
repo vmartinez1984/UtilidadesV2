@@ -24,3 +24,4 @@ C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Peliculas.Bl\obj\Release\net8.0
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Peliculas.Bl\obj\Release\net8.0\refint\Peliculas.Bl.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Peliculas.Bl\obj\Release\net8.0\Peliculas.Bl.pdb
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Peliculas.Bl\obj\Release\net8.0\ref\Peliculas.Bl.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Peliculas.Bl\obj\Release\net8.0\Pelicula.9290852B.Up2Date

@@ -30,6 +30,7 @@
 		<ProjectReference Include="..\Pizzas.BusinessLayer\VMtz84.Pizzas.csproj" />
 		<ProjectReference Include="..\ProductoBusinessLayer\ProductoBusinessLayer.csproj" />
 		<ProjectReference Include="..\Utilidades.Servicios\Utilidades.Servicios.csproj" />
+		<ProjectReference Include="..\VMtz84.Asistencias\VMtz84.Asistencias.csproj" />
 		<ProjectReference Include="..\VMtz84.WebHook\VMtz84.WebHook.csproj" />
 	</ItemGroup>
 

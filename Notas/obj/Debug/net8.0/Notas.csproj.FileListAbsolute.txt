@@ -24,3 +24,4 @@ C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Notas\obj\Debug\net8.0\Notas.dl
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Notas\obj\Debug\net8.0\refint\Notas.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Notas\obj\Debug\net8.0\Notas.pdb
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Notas\obj\Debug\net8.0\ref\Notas.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Notas\obj\Debug\net8.0\Notas.csproj.Up2Date

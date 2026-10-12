@@ -172,7 +172,6 @@ C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\obj\Release\net8
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\obj\Release\net8.0\Utilidades.Api.AssemblyInfoInputs.cache
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\obj\Release\net8.0\Utilidades.Api.AssemblyInfo.cs
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\obj\Release\net8.0\Utilidades.Api.csproj.CoreCompileInputs.cache
-C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\obj\Release\net8.0\Utilidades.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\obj\Release\net8.0\Utilidades.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\obj\Release\net8.0\Utilidades.Api.sourcelink.json
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\obj\Release\net8.0\rjimswa.dswa.cache.json
@@ -207,3 +206,6 @@ C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\ImplementacionQr.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\ImplementacionQr.pdb
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\VMtz84.Asistencias.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Release\net8.0\VMtz84.Asistencias.pdb
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\obj\Release\net8.0\Utilidades.Api.MvcApplicationPartsAssemblyInfo.cs

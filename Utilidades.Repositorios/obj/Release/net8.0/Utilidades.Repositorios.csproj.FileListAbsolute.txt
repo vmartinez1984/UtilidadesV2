@@ -24,3 +24,4 @@ C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Repositorios\obj\Rel
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Repositorios\obj\Release\net8.0\refint\Utilidades.Repositorios.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Repositorios\obj\Release\net8.0\Utilidades.Repositorios.pdb
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Repositorios\obj\Release\net8.0\ref\Utilidades.Repositorios.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Repositorios\obj\Release\net8.0\Utilidad.A341B5D7.Up2Date

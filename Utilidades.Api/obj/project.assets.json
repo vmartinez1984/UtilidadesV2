@@ -2212,6 +2212,23 @@
           "bin/placeholder/Utilidades.Servicios.dll": {}
         }
       },
+      "VMtz84.Asistencias/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.4",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.4",
+          "MongoDB.Bson": "3.3.0",
+          "MongoDB.Driver": "3.3.0"
+        },
+        "compile": {
+          "bin/placeholder/VMtz84.Asistencias.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VMtz84.Asistencias.dll": {}
+        }
+      },
       "VMtz84.Pizzas/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -7127,6 +7144,11 @@
       "path": "../Utilidades.Servicios/Utilidades.Servicios.csproj",
       "msbuildProject": "../Utilidades.Servicios/Utilidades.Servicios.csproj"
     },
+    "VMtz84.Asistencias/1.0.0": {
+      "type": "project",
+      "path": "../VMtz84.Asistencias/VMtz84.Asistencias.csproj",
+      "msbuildProject": "../VMtz84.Asistencias/VMtz84.Asistencias.csproj"
+    },
     "VMtz84.Pizzas/1.0.0": {
       "type": "project",
       "path": "../Pizzas.BusinessLayer/VMtz84.Pizzas.csproj",
@@ -7150,6 +7172,7 @@
       "ProductoBusinessLayer >= 1.0.0",
       "Swashbuckle.AspNetCore >= 8.1.1",
       "Utilidades.Servicios >= 1.0.0",
+      "VMtz84.Asistencias >= 1.0.0",
       "VMtz84.Pizzas >= 1.0.0",
       "VMtz84.WebHook >= 1.0.0"
     ]
@@ -7215,6 +7238,9 @@
             "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\Utilidades.Servicios\\Utilidades.Servicios.csproj": {
               "projectPath": "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\Utilidades.Servicios\\Utilidades.Servicios.csproj"
             },
+            "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\VMtz84.Asistencias\\VMtz84.Asistencias.csproj": {
+              "projectPath": "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\VMtz84.Asistencias\\VMtz84.Asistencias.csproj"
+            },
             "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\VMtz84.WebHook\\VMtz84.WebHook.csproj": {
               "projectPath": "C:\\Users\\ahal_\\source\\repos\\dotnet\\Utilidades.V3\\VMtz84.WebHook\\VMtz84.WebHook.csproj"
             }
@@ -7231,7 +7257,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.300"
+      "SdkAnalysisLevel": "10.0.400"
     },
     "frameworks": {
       "net8.0": {
@@ -7261,19 +7287,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.28, 8.0.28]"
+            "version": "[8.0.31, 8.0.31]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.28, 8.0.28]"
+            "version": "[8.0.31, 8.0.31]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.28, 8.0.28]"
+            "version": "[8.0.31, 8.0.31]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.28, 8.0.28]"
+            "version": "[8.0.31, 8.0.31]"
           }
         ],
         "frameworkReferences": {
@@ -7284,7 +7310,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

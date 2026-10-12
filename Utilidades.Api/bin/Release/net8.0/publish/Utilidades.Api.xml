@@ -4,6 +4,56 @@
         <name>Utilidades.Api</name>
     </assembly>
     <members>
+        <member name="T:Utilidades.Api.Controllers.AsistenciasController">
+            <summary>
+            Controlador para probar una ap de asistencia
+            </summary>
+        </member>
+        <member name="M:Utilidades.Api.Controllers.AsistenciasController.#ctor(VMtz84.Asistencias.ReglasDeNegocio.UsuarioReglaDeNegocio,VMtz84.Asistencias.ReglasDeNegocio.AsistenciaReglasDeNegocio,JwtToken.Services.JwtTokenService,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="usuarioService"></param>
+            <param name="asistenciaReglasDeNegocio"></param>
+            <param name="jwtTokenService"></param>
+            <param name="environment"></param>
+        </member>
+        <member name="M:Utilidades.Api.Controllers.AsistenciasController.AgregarAsync(VMtz84.Asistencias.Dtos.UsuarioDtoIn)">
+            <summary>
+            Registro de usuarios
+            </summary>
+            <returns></returns>
+            <response code="201"></response>        
+        </member>
+        <member name="M:Utilidades.Api.Controllers.AsistenciasController.ObtenerTokenAsync(VMtz84.Asistencias.Dtos.InicioDeSesionDto)">
+            <summary>
+            Autorización Basica para obtener token JWT
+            </summary>        
+            <returns></returns>
+            <response code="200"></response>        
+            <response code="404"></response>        
+        </member>
+        <member name="M:Utilidades.Api.Controllers.AsistenciasController.RegsitrarAsistenciaAsync(VMtz84.Asistencias.Dtos.AsistenciaDtoIn)">
+            <summary>
+            Registro de asistencia
+            </summary>        
+            <returns></returns>
+            <response code="201"></response>                 
+        </member>
+        <member name="M:Utilidades.Api.Controllers.AsistenciasController.ObtenerListaDeAsistencias">
+            <summary>
+            Lista de asistencia
+            </summary>        
+            <returns></returns>
+            <response code="200"></response>                 
+        </member>
+        <member name="M:Utilidades.Api.Controllers.AsistenciasController.ObtenerEventosAsync">
+            <summary>
+            Lista de eventos
+            </summary>        
+            <returns></returns>
+            <response code="200"></response>                 
+        </member>
         <member name="T:Utilidades.Api.Controllers.ClabesController">
             <summary>
             Provides API endpoints for generating valid fake CLABE account numbers according to Mexican banking standards.
@@ -384,6 +434,16 @@
             <param name="rfcDto"></param>
             <returns></returns>
             <response code="202">Create</response>
+        </member>
+        <member name="M:Utilidades.Api.Controllers.ServiciosController.Qr(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Generación de un QR a partir de una cadena
+            </summary>
+            <param name="mensaje"></param>
+            <param name="ancho"></param>
+            <param name="largo"></param>
+            <param name="margen"></param>
+            <returns></returns>
         </member>
         <member name="M:Utilidades.Api.Controllers.TarjetasDeDebitoController.Get">
             <summary>

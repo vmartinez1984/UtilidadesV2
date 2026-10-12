@@ -47,6 +47,13 @@ namespace Utilidades.Api.Extensores
                     Description = "WS para priacticar con "
                 });
 
+                gen.SwaggerDoc("Asistencias", new OpenApiInfo
+                {
+                    Title = "Asistencias",
+                    Version = "1.0",
+                    Description = "WS para practicas"
+                });
+
                 gen.AddSecurityDefinition("bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
@@ -65,21 +72,8 @@ namespace Utilidades.Api.Extensores
                     In = ParameterLocation.Header,
                     Description = "Use Basic authentication: Authorization: Basic {base64(correo:contraseña)}"
                 });
-
-                //gen.AddSecurityRequirement(new OpenApiSecurityRequirement
-                //{
-                //    {
-                //        new OpenApiSecurityScheme
-                //        {
-                //            Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "basic", ExternalResource= "/swagger/Pizzas/swagger.json" }
-                //        },
-                //        new string[] { }
-                //    }
-                //});
-
-                gen.OperationFilter<MultiAuthOperationFilter>();
-
-                //gen.OperationFilter<AuthRequirementOperationFilter>();
+                                
+                gen.OperationFilter<MultiAuthOperationFilter>();                
 
                 var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 gen.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
@@ -99,6 +93,7 @@ namespace Utilidades.Api.Extensores
                 c.SwaggerEndpoint("/swagger/Notas/swagger.json", "Notas");
                 c.SwaggerEndpoint("/swagger/cruds/swagger.json", "CRUDS");
                 c.SwaggerEndpoint("/swagger/Pizzas/swagger.json", "Pizzas");
+                c.SwaggerEndpoint("/swagger/Asistencias/swagger.json", "Asistencias");
 
                 c.RoutePrefix = string.Empty;
             });

@@ -36,3 +36,4 @@ C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\CodigosPostales.Repositorios\ob
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\CodigosPostales.Repositorios\obj\Debug\net8.0\refint\CodigosPostales.Repositorios.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\CodigosPostales.Repositorios\obj\Debug\net8.0\CodigosPostales.Repositorios.pdb
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\CodigosPostales.Repositorios\obj\Debug\net8.0\ref\CodigosPostales.Repositorios.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\CodigosPostales.Repositorios\obj\Debug\net8.0\CodigosP.B9799069.Up2Date

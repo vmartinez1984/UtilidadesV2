@@ -553,54 +553,6 @@
         }
       }
     },
-    "/api/Servicios": {
-      "get": {
-        "tags": [
-          "Servicios"
-        ],
-        "parameters": [
-          {
-            "name": "mensaje",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "ancho",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 400
-            }
-          },
-          {
-            "name": "largo",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 400
-            }
-          },
-          {
-            "name": "margen",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 10
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/TarjetasDeDebito": {
       "get": {
         "tags": [

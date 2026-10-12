@@ -167,6 +167,7 @@ C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\ProductoBusinessLayer.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Utilidades.Repositorios.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Utilidades.Servicios.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\VMtz84.Asistencias.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\VMtz84.Pizzas.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\VMtz84.WebHook.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\CodigosPostales.ReglasDeNegocio.pdb
@@ -178,6 +179,7 @@ C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\VMtz84.Pizzas.pdb
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\ProductoBusinessLayer.pdb
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Utilidades.Servicios.pdb
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\VMtz84.Asistencias.pdb
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\VMtz84.WebHook.pdb
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\CodigosPostales.Repositorios.pdb
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\Utilidades.Api\bin\Debug\net8.0\Utilidades.Repositorios.pdb

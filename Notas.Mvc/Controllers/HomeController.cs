@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Notas.BussinesLayer;
 using Notas.Mvc.Models;
 using System.Diagnostics;
 
@@ -6,8 +7,16 @@ namespace Notas.Mvc.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly NotaBl _notaBl;
+
+        public HomeController(NotaBl notaBl)
         {
+            _notaBl = notaBl;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var lista = await _notaBl.ObtenerAsync();
             return View();
         }
 

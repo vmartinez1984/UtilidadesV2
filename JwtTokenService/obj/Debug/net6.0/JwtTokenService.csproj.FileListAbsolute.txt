@@ -24,3 +24,4 @@ C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\JwtTokenService\obj\Debug\net6.
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\JwtTokenService\obj\Debug\net6.0\refint\JwtTokenService.dll
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\JwtTokenService\obj\Debug\net6.0\JwtTokenService.pdb
 C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\JwtTokenService\obj\Debug\net6.0\ref\JwtTokenService.dll
+C:\Users\ahal_\source\repos\dotnet\Utilidades.V3\JwtTokenService\obj\Debug\net6.0\JwtToken.35B84D80.Up2Date

@@ -8,6 +8,7 @@ using Utilidades.Servicios.Helpers;
 using VMtz84.Pizzas.Extensores;
 using JwtToken.Services.Helpers;
 using VMtz84.WebHook;
+using VMtz84.Asistencias.Ayudantes;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Services.AgregarNotas();
 builder.Services.AgregarProductos();
 builder.Services.AgregarContadores();
 builder.Services.AgregarPizzasService();
+builder.Services.AgregarAsistencia();
 builder.Services.AgregarAutenticacionJwt(builder.Configuration);
 builder.Services.AgregarWebHookService();
 
